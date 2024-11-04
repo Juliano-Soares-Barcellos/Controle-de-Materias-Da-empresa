@@ -71,7 +71,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 Tabela.RowPrePaint += new DataGridViewRowPrePaintEventHandler(MudaCor);
             }
         }
-        public void ProcurarPeloSistema(String sistemaOp)
+        public void ProcurarPeloSistema(string sistemaOp)
         {
             this.Apagar();
             retornaTudoConserto = computadoresMapeadosEconsertado.Dao.montarTabelasDao.MontarTabela(sistemaOp);

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.35116.124
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ControleDeMateriaisMandadoParaConserto", "ControleDeMateriaisMandadoParaConserto", "{BE7FFD08-65D9-41DE-82E0-4CB9C256AF86}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GerenciamentoDeMaterial", "GerenciamentoDeMaterial", "{BE7FFD08-65D9-41DE-82E0-4CB9C256AF86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imobilizados", "Imobilizados", "{59766702-AADF-4A99-B921-3CE7DF1B9C0F}"
 EndProject

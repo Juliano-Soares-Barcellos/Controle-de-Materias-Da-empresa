@@ -20,8 +20,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         private readonly string TextoDescricao2 = "Digite a Descricao do que foi feito";
         private readonly string TextoSistema = "Selecione o sistema operacional";
         private readonly string TextoModelo = "Selecione ou digite o modelo";
-        private string message = "Deseja prosseguir? Digite 's' para sim ou 'n' para não:";
-        private string caption = "Confirmação";
+        private readonly string message = "Deseja prosseguir? Digite 's' para sim ou 'n' para não:";
+        private readonly string caption = "Confirmação";
 
         public TelaDeCadastramento()
         {
@@ -34,7 +34,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
         private void ConfigurarComponentes()
         {
-            // Configuração inicial dos componentes com textos padrão
             ConfigurarTextoInicial(TextBox1, TextoPatrimonio);
             ConfigurarTextoInicial(textPatrimonio, TextoPatrimonio);
             ConfigurarTextoInicial(Tnome, TextoPatrimonio);
@@ -44,7 +43,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             ConfigurarTextoInicial(comboSistema, TextoSistema);
             ConfigurarTextoInicial(ComboSistemaHistorico, TextoSistema);
             ConfigurarTextoInicial(comboModelo, TextoModelo);
-
             TextBox1.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) { ProcurarPatrimonio(); } };
             ComboSistemaHistorico.KeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) { ProcurarPorSistema(); } };
         }
@@ -106,7 +104,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         {
             if (combo != null)
             {
-                if (combo.Text.Equals("") || combo.Text.Equals(texto))
+                // Verifica se o combo está vazio ou se ainda tem o texto padrão
+                if (string.IsNullOrEmpty(combo.Text) || combo.Text.Equals(texto))
                 {
                     return false;
                 }
@@ -114,12 +113,17 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             return true;
         }
 
-    public Boolean ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConserto()
+        public Boolean ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConserto()
         {
-            if (validaEntradaDadosText(TextoPatrimonio, TextBox1)
-                | validaEntradaDadosComboBox(TextoSistema,ComboSistemaHistorico))
+            if (validaEntradaDadosText(TextoPatrimonio, TextBox1))
                      return true;
-            throw new Exception("Digite o Patrimonio ou escolha o Sistema Operacional");
+            throw new Exception("Digite o Patrimonio ");
+        }
+        public Boolean ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConsertoCombo()
+        {
+            if (validaEntradaDadosComboBox(TextoSistema, ComboSistemaHistorico))
+                     return true;
+            throw new Exception("escolha o Sistema Operacional");
         }
 
         public Boolean ValidaSeNaoTemTextEmBrancoTelaCadastroConserto()
@@ -148,7 +152,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 if (result == DialogResult.Yes)
                 {
                     InserirComputadorConserto = new InseriComputadorParaConserto(textPatrimonio, TextDescricao, comboModelo, comboBox1);
-
                 }
                 else
                 {
@@ -184,8 +187,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             ConfigurarComponentes();
         }
 
-
-
         private void ProcurarPatrimonio()
         {
             try
@@ -197,21 +198,19 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-            ConfigurarComponentes();
         }
 
         public void ProcurarPorSistema()
         {
             try
             {
-                ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConserto();
+                ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConsertoCombo();
                 HistoricoDeConserto.ProcurarPeloSistema(ComboSistemaHistorico.SelectedItem.ToString());
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            ConfigurarComponentes();
         }
 
         private void CheckGravar_CheckedChanged(object sender, EventArgs e)
