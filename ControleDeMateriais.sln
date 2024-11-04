@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.35116.124
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ControleDeMateriaisMandadoParaConserto", "ControleDeMateriaisMandadoParaConserto", "{BE7FFD08-65D9-41DE-82E0-4CB9C256AF86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imobilizados", "Imobilizados", "{59766702-AADF-4A99-B921-3CE7DF1B9C0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Computadores", "Computadores", "{0A7E38A3-CE23-4A9C-84CF-17F3AA7E5DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciamentoDeMateriais", "ProjetoDeControleDeMateriaisMandadoParaConserto\GerenciamentoDeMateriais.csproj", "{F85DE329-EEC1-4B11-827C-30DA0482EB32}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9567E69-072F-44AE-B9C0-A004B3E34074} = {B9567E69-072F-44AE-B9C0-A004B3E34074}
+		{8C1779AE-8CF7-429F-8A9C-AE50BF861D57} = {8C1779AE-8CF7-429F-8A9C-AE50BF861D57}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "computadoresMapeadosEconsertado", "Computadores\computadoresMapeadosEconsertado.csproj", "{B9567E69-072F-44AE-B9C0-A004B3E34074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImobilizadosDll", "ImobilizadosDll\ImobilizadosDll.csproj", "{8C1779AE-8CF7-429F-8A9C-AE50BF861D57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F85DE329-EEC1-4B11-827C-30DA0482EB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85DE329-EEC1-4B11-827C-30DA0482EB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85DE329-EEC1-4B11-827C-30DA0482EB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85DE329-EEC1-4B11-827C-30DA0482EB32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9567E69-072F-44AE-B9C0-A004B3E34074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9567E69-072F-44AE-B9C0-A004B3E34074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9567E69-072F-44AE-B9C0-A004B3E34074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9567E69-072F-44AE-B9C0-A004B3E34074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1779AE-8CF7-429F-8A9C-AE50BF861D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1779AE-8CF7-429F-8A9C-AE50BF861D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1779AE-8CF7-429F-8A9C-AE50BF861D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1779AE-8CF7-429F-8A9C-AE50BF861D57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F85DE329-EEC1-4B11-827C-30DA0482EB32} = {BE7FFD08-65D9-41DE-82E0-4CB9C256AF86}
+		{B9567E69-072F-44AE-B9C0-A004B3E34074} = {0A7E38A3-CE23-4A9C-84CF-17F3AA7E5DA1}
+		{8C1779AE-8CF7-429F-8A9C-AE50BF861D57} = {59766702-AADF-4A99-B921-3CE7DF1B9C0F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F00434DB-0BA0-4350-A9B2-7F87B5935590}
+	EndGlobalSection
+EndGlobal
