@@ -413,10 +413,13 @@
             // 
             // panel23
             // 
+            this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel23.Controls.Add(this.dataGridViewImob);
             this.panel23.Location = new System.Drawing.Point(-2, 136);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(1112, 462);
+            this.panel23.Size = new System.Drawing.Size(1105, 462);
             this.panel23.TabIndex = 1;
             // 
             // dataGridViewImob
@@ -443,7 +446,7 @@
             this.dataGridViewImob.ReadOnly = true;
             this.dataGridViewImob.RowHeadersVisible = false;
             this.dataGridViewImob.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewImob.Size = new System.Drawing.Size(1112, 462);
+            this.dataGridViewImob.Size = new System.Drawing.Size(1105, 462);
             this.dataGridViewImob.TabIndex = 0;
             // 
             // tabPage2
@@ -964,7 +967,7 @@
             this.panel3.Controls.Add(this.dataGridView);
             this.panel3.Location = new System.Drawing.Point(1, 161);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1117, 444);
+            this.panel3.Size = new System.Drawing.Size(1112, 444);
             this.panel3.TabIndex = 1;
             // 
             // dataGridView
@@ -989,7 +992,7 @@
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.ShowEditingIcon = false;
-            this.dataGridView.Size = new System.Drawing.Size(1117, 444);
+            this.dataGridView.Size = new System.Drawing.Size(1112, 444);
             this.dataGridView.TabIndex = 0;
             // 
             // panel14

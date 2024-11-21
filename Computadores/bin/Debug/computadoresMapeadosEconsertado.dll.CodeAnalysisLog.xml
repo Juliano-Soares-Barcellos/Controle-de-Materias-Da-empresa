@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll">
+   <Modules>
+    <Module Name="computadoresmapeadoseconsertado.dll">
+     <Namespaces>
+      <Namespace Name="computadoresMapeadosEconsertado.Dao">
+       <Types>
+        <Type Name="computadorDao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ssd()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2024-11-19 14:18:57Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="79">A cadeia de caracteres de consulta passada para 'MySqlCommand.MySqlCommand(string, MySqlConnection)' em 'computadorDao.ssd()' pode conter as seguintes variáveis 'sql.filtrossd'. Se qualquer uma destas variáveis for proveniente da entrada do usuário, considere usar um procedimento armazenado ou uma consulta SQL parametrizada antes de compilar a consulta com concatenações de cadeias de caracteres.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InsersaoDao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#inserirComputadorNovo(MySql.Data.MySqlClient.MySqlParameter[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2024-11-19 14:18:57Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="59">A cadeia de caracteres de consulta passada para 'MySqlCommand.MySqlCommand(string, MySqlConnection)' em 'InsersaoDao.inserirComputadorNovo(MySqlParameter[])' pode conter as seguintes variáveis 'query.inserirComputador'. Se qualquer uma destas variáveis for proveniente da entrada do usuário, considere usar um procedimento armazenado ou uma consulta SQL parametrizada antes de compilar a consulta com concatenações de cadeias de caracteres.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Revisar as consultas SQL em busca de vulnerabilidades de segurança</Name>
+   <Description>Uma cadeia de caracteres de comando SQL compilada de uma entrada do usuário é vulnerável a ataques de injeção SQL. O Microsoft SQL Server e outros servidores de banco de dados oferecem suporte a procedimentos armazenados e consultas SQL parametrizadas, o que reduz o risco de ataques de injeção.</Description>
+   <Resolution Name="WithNonLiterals">A cadeia de caracteres de consulta passada para {0} em {1} pode conter as seguintes variáveis {2}. Se qualquer uma destas variáveis for proveniente da entrada do usuário, considere usar um procedimento armazenado ou uma consulta SQL parametrizada antes de compilar a consulta com concatenações de cadeias de caracteres.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoria</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Recolher Tudo</String>
+  <String Key="CheckId">Verificar ID</String>
+  <String Key="Error">Erro</String>
+  <String Key="Errors">erro(s)</String>
+  <String Key="ExpandAll">Expandir Tudo</String>
+  <String Key="Help">Ajuda</String>
+  <String Key="Line">Linha</String>
+  <String Key="Messages">mensagem(ns)</String>
+  <String Key="LocationNotStoredInPdb">[Local não armazenado em Pdb]</String>
+  <String Key="Project">Projeto</String>
+  <String Key="Resolution">Resolução</String>
+  <String Key="Rule">Regra</String>
+  <String Key="RuleFile">Arquivo de Regra</String>
+  <String Key="RuleDescription">Descrição da Regra</String>
+  <String Key="Source">Origem</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Destino</String>
+  <String Key="Warning">Aviso</String>
+  <String Key="Warnings">aviso(s)</String>
+  <String Key="ReportTitle">Relatório de Análise de Código</String>
+ </Localized>
+</FxCopReport>

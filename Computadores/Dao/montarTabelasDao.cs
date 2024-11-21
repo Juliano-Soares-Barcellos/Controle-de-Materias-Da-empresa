@@ -25,7 +25,7 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Patrimonio", typeof(string));
                 tabela.Columns.Add("PA", typeof(int));
                 tabela.Columns.Add("Grupo", typeof(string));
-                tabela.Columns.Add("Data-Saida", typeof(string));
+                tabela.Columns.Add("Data-Saida", typeof(DateTime));
                 tabela.Columns.Add("o que foi feito", typeof(string));
 
 
@@ -105,7 +105,7 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Patrimonio", typeof(string));
                 tabela.Columns.Add("PA", typeof(int));
                 tabela.Columns.Add("Grupo", typeof(string));
-                tabela.Columns.Add("Data-Saida", typeof(string));
+                tabela.Columns.Add("Data-Saida", typeof(DateTime));
                 tabela.Columns.Add("o que foi feito", typeof(string));
 
 
