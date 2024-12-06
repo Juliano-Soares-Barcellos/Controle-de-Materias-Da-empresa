@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ldTIGSIKdZFJSE0yGvgXtL6pk9ZXU/eFCU/JMdhcPUjS6AMdb5l8tskNzHX4UW6xgq+A7zZXM3cuBWFjcTdzFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\julianob\\Desktop\\serviço\\ControleDeMateriais\\Computadores\\computadoresMapeadosEconsertado.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\julianob\\.nuget\\packages\\dapper\\1.50.2\\dapper.1.50.2.nupkg.sha512",
+    "C:\\Users\\julianob\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

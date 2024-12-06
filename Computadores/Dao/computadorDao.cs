@@ -12,7 +12,6 @@ namespace computadoresMapeadosEconsertado.Dao
     public class computadorDao
     {
         public static Query query = new Query();
-
         public static computadorModel AcharPc(string patrimonio)
         {
             try
@@ -58,11 +57,9 @@ namespace computadoresMapeadosEconsertado.Dao
                     },
                     splitOn: "id_pa,id_grupo"
                 );
-
                 return resultados.AsList();
             }
         }
-
 
         public List<Object[]> ssd()
         {
@@ -70,16 +67,13 @@ namespace computadoresMapeadosEconsertado.Dao
             Query sql;
             con = new banco().conexao();
             con.Open();
-
             List<Object[]> resultados = new List<Object[]>();
 
             try
             {
                 sql = new Query();
                 MySqlCommand comando = new MySqlCommand(sql.filtrossd, con);
-
                 MySqlDataReader reader = comando.ExecuteReader();
-
                 while (reader.Read())
                 {
                     Object[] row = new Object[reader.FieldCount];
@@ -88,10 +82,8 @@ namespace computadoresMapeadosEconsertado.Dao
                     {
                         row[i] = reader[i];
                     }
-
                     resultados.Add(row);
                 }
-
                 reader.Close();
             }
             catch (MySqlException ex)
@@ -102,7 +94,6 @@ namespace computadoresMapeadosEconsertado.Dao
             {
                 con.Close();
             }
-
             return resultados;
         }
     
@@ -117,7 +108,6 @@ namespace computadoresMapeadosEconsertado.Dao
                          computador.fk_compComputador_Pa = pa;
                          pa.Fk_gurupoModel = grupo;
                          computadorConserto.fkComputador = computador;
-
                          return Tuple.Create(computador, computadorConserto);
                      },
                      splitOn: "id_computador,id_pa,id_grupo,id_conserto"
@@ -143,7 +133,6 @@ namespace computadoresMapeadosEconsertado.Dao
                         });
                     }
                 }
-
                 return computadoresComConsertos;
             }
         }
@@ -163,14 +152,11 @@ namespace computadoresMapeadosEconsertado.Dao
                     },
                     splitOn: "id_computador,id_pa,id_grupo"
                 );
-
                 return resultados.AsList();
             }
         }
         public List<computadorComConsertos> BuscaPatrimonio(string patrimonio)
         {
-
-
             using (var conexao = new banco().conexao())
             {
                 var resultados = conexao.Query<computadorModel, computador_conserto, paModel, grupos_pa, computadorComConsertos>(
@@ -201,7 +187,6 @@ namespace computadoresMapeadosEconsertado.Dao
 
         public List<computadorComConsertos> BuscaPeloSistema(string sistemasOperacionais)
         {
-            
             using (var conexao = new banco().conexao())
             {
                 var resultados = conexao.Query<computadorModel, paModel, grupos_pa, computador_conserto, computadorComConsertos>(
@@ -309,32 +294,6 @@ namespace computadoresMapeadosEconsertado.Dao
             return null;
         }
 
-        //public List<computadorModel> FiltroMapInitFiltroMapInit(string query)
-        //{
-        //    try
-        //    {
-        //        using (var conexao = new banco().conexao())
-        //        {
-        //            conexao.Open();
-        //            var resultados = conexao.Query<computadorModel, paModel, grupos_pa, computadorModel>(
-        //                query,
-        //                (computador_teste, pa_teste, grupo_teste) =>
-        //                {
-        //                    computador_teste.fk_compComputador_Pa = pa_teste;
-        //                    pa_teste.Fk_gurupoModel = grupo_teste;
-        //                    return computador_teste;
-        //                },
-        //                splitOn: "id_pa,id_grupo"
-        //            );
-        //            return resultados.ToList();
-        //        }
-        //    }
-        //    catch (MySqlException e)
-        //    {
-        //        Console.WriteLine(e);
-        //    }
-        //    return null;
-        //}
         public string condicao(string query)
         {
             Query q = new Query();
@@ -388,13 +347,11 @@ namespace computadoresMapeadosEconsertado.Dao
                         valorRespostaDepreciacao += valor* depreciacao;
                     }
                     return valor-valorRespostaDepreciacao;
-
                 }
             }
             return 0;
         }
-     }
-
+    }
 }
 
 

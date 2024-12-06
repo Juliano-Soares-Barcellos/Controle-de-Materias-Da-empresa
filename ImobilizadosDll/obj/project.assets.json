@@ -87,6 +87,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets": {}
         }
       },
       "MySql.Data/9.1.0": {
@@ -157,6 +160,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Configuration.ConfigurationManager.targets": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.1": {
@@ -170,6 +176,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Diagnostics.DiagnosticSource.targets": {}
         }
       },
       "System.IO/4.3.0": {
@@ -309,6 +318,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets": {}
         }
       },
       "System.Security.Permissions/8.0.0": {
@@ -321,6 +333,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Permissions.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Permissions.targets": {}
         }
       },
       "System.Security.Principal.Windows/5.0.0": {
@@ -353,6 +368,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encoding.CodePages.targets": {}
         }
       },
       "System.Text.Encodings.Web/8.0.0": {
@@ -367,6 +385,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encodings.Web.targets": {}
         }
       },
       "System.Text.Json/8.0.4": {
@@ -384,6 +405,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Json.targets": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -501,6 +525,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets": {}
         }
       },
       "MySql.Data/9.1.0": {
@@ -549,6 +576,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Configuration.ConfigurationManager.targets": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.1": {
@@ -562,6 +592,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Diagnostics.DiagnosticSource.targets": {}
         }
       },
       "System.IO/4.3.0": {
@@ -695,6 +728,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets": {}
         }
       },
       "System.Security.Permissions/8.0.0": {
@@ -707,6 +743,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Permissions.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Permissions.targets": {}
         }
       },
       "System.Security.Principal.Windows/5.0.0": {
@@ -733,6 +772,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encoding.CodePages.targets": {}
         }
       },
       "System.Text.Encodings.Web/8.0.0": {
@@ -747,6 +789,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encodings.Web.targets": {}
         }
       },
       "System.Text.Json/8.0.4": {
@@ -764,6 +809,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Json.targets": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -881,6 +929,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets": {}
         }
       },
       "MySql.Data/9.1.0": {
@@ -936,6 +987,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Configuration.ConfigurationManager.targets": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.1": {
@@ -949,6 +1003,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Diagnostics.DiagnosticSource.targets": {}
         }
       },
       "System.IO/4.3.0": {
@@ -1082,6 +1139,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets": {}
         }
       },
       "System.Security.Permissions/8.0.0": {
@@ -1094,6 +1154,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Permissions.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Permissions.targets": {}
         }
       },
       "System.Security.Principal.Windows/5.0.0": {
@@ -1120,6 +1183,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encoding.CodePages.targets": {}
         }
       },
       "System.Text.Encodings.Web/8.0.0": {
@@ -1134,6 +1200,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encodings.Web.targets": {}
         }
       },
       "System.Text.Json/8.0.4": {
@@ -1151,6 +1220,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Json.targets": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -1268,6 +1340,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/Microsoft.Bcl.AsyncInterfaces.targets": {}
         }
       },
       "MySql.Data/9.1.0": {
@@ -1316,6 +1391,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Configuration.ConfigurationManager.targets": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.1": {
@@ -1329,6 +1407,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Diagnostics.DiagnosticSource.targets": {}
         }
       },
       "System.IO/4.3.0": {
@@ -1462,6 +1543,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets": {}
         }
       },
       "System.Security.Permissions/8.0.0": {
@@ -1474,6 +1558,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Permissions.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Security.Permissions.targets": {}
         }
       },
       "System.Security.Principal.Windows/5.0.0": {
@@ -1500,6 +1587,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encoding.CodePages.targets": {}
         }
       },
       "System.Text.Encodings.Web/8.0.0": {
@@ -1514,6 +1604,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Encodings.Web.targets": {}
         }
       },
       "System.Text.Json/8.0.4": {
@@ -1531,6 +1624,9 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
+        },
+        "build": {
+          "buildTransitive/net461/System.Text.Json.targets": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {

@@ -5,25 +5,21 @@ using ProjetoDeControleDeMateriaisMandadoParaConserto.Model;
 using ProjetoDeControleDeMateriaisMandadoParaConserto.Querys;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
 {
     internal class ComputadorDao
     {
-
         private MySqlConnection con = null;
         private Query sql;
         private MySqlTransaction Transacao;
-
 
         public int AcharPcs(String computador)
         {
             int id = -1;
             con = new Banco().Conexaopcs();
             con.Open();
-
             try
             {
                 sql = new Query();
@@ -48,15 +44,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             }
             return id;
         }
-
-
         public void inserirComputadorEntrada(Computador computador, String Descricao, DateTime data)
         {
             con = new Banco().Conexaopcs();
             con.Open();
             try
             {
-
                 MySqlCommand comando = con.CreateCommand();
                 Transacao = con.BeginTransaction();
                 comando.Transaction = Transacao;
@@ -76,7 +69,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 }
                 InsereDataEntrada(Descricao, id);
             }
-
             catch (MySqlException ex)
             {
                 MessageBox.Show("Erro ao executar o comando SQL: " + ex.Message);
@@ -135,7 +127,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 Transacao = con.BeginTransaction();
                 comando.Transaction = Transacao;
                 sql = new Query();
-                comando.CommandText =sql.UpdateNosPrograma;
+                comando.CommandText = sql.UpdateNosPrograma;
                 comando.Parameters.AddWithValue("@programas", computador.Programas);
                 comando.Parameters.AddWithValue("@id", computador.Id);
                 int rown = comando.ExecuteNonQuery();
@@ -201,7 +193,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 dataentrada.Parameters.AddWithValue("@data", DateTime.Now);
                 dataentrada.Parameters.AddWithValue("@id", id);
                 dataentrada.Parameters.AddWithValue("@computadorsaida_id", 1);
-                int rown=dataentrada.ExecuteNonQuery();
+                int rown = dataentrada.ExecuteNonQuery();
                 Transacao.Commit();
             }
 
@@ -226,7 +218,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             try
             {
                 sql = new Query();
-                MySqlCommand cmd = new MySqlCommand(sql.ResQuantiDataEntrada,con);
+                MySqlCommand cmd = new MySqlCommand(sql.ResQuantiDataEntrada, con);
                 cmd.Parameters.AddWithValue("@data_id", computador.Computador_id.Id);
                 int TanhoDataEn = Convert.ToInt32(cmd.ExecuteScalar());
                 TamanhoDataSaida = this.TamanhoDataSaida(computador);
@@ -253,7 +245,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             try
             {
                 sql = new Query();
-                MySqlCommand cmd = new MySqlCommand(sql.ResQuantidadeDataSaida,con);
+                MySqlCommand cmd = new MySqlCommand(sql.ResQuantidadeDataSaida, con);
                 cmd.Parameters.AddWithValue("@computador_id", computador.Computador_id.Id);
                 TanhoDataEn = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -282,7 +274,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 sql = new Query();
                 MySqlCommand cmd = new MySqlCommand(sql.acharIdDataEntrada, con);
                 cmd.Parameters.AddWithValue("@idData", IdData);
-               object iddata = cmd.ExecuteScalar();
+                object iddata = cmd.ExecuteScalar();
 
                 if (iddata != null || !iddata.ToString().Equals("{}"))
                 {
@@ -311,9 +303,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 con = new Banco().Conexaopcs();
                 con.Open();
-                 string sql = "select Marca from computadorentrada ;";
+                string sql = "select Marca from computadorentrada ;";
                 MySqlCommand comando = new MySqlCommand(sql, con);
-             
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
@@ -321,14 +312,11 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     String marca = reader["Marca"].ToString();
 
                     if (!resultados.Contains(marca))
-                    { 
-                    resultados.Add(marca);
+                    {
+                        resultados.Add(marca);
                     }
                 }
-
-           
                 reader.Close();
-
             }
             catch (MySqlException ex)
             {
@@ -338,11 +326,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 con.Close();
             }
-
             return resultados;
         }
     }
-
 }
 
 

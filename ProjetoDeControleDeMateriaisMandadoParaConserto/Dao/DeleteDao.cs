@@ -3,9 +3,6 @@ using ProjetoDeControleDeMateriaisMandadoParaConserto.BancoConexao;
 using ProjetoDeControleDeMateriaisMandadoParaConserto.Querys;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
@@ -13,7 +10,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
     class DeleteDao
     {
         MySqlConnection con = null;
-
         public void deletarProduto(String numero)
         {
             int rowns = 0;
@@ -21,7 +17,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             try
             {
                 con = new Banco().Conexao();
-                Query sql= new Query();
+                Query sql = new Query();
                 con.Open();
                 String Sql = sql.SelectDelet;
                 MySqlCommand comando = new MySqlCommand(Sql, con);
@@ -46,8 +42,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     int produtoId = Convert.ToInt32(ArrayDeletar[0][0].ToString());
 
                     if (ArrayDeletar[0][6] == null || string.IsNullOrEmpty(ArrayDeletar[0][6].ToString()))
-                        {
-                        String id=ArrayDeletar[0][0].ToString();
+                    {
+                        String id = ArrayDeletar[0][0].ToString();
                         string sqlDeleteUltimoConserto = "DELETE FROM produto WHERE id=@id ;";
                         MySqlCommand deleteProduto = new MySqlCommand(sqlDeleteUltimoConserto, con);
                         deleteProduto.Parameters.Clear();
@@ -60,7 +56,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     else
                     {
                         int consertoId = Convert.ToInt32(ArrayDeletar[0][6].ToString());
-
                         if (produtoStatus == 1 || produtoStatus == 0)
                         {
                             String sql0 = "delete from Conserto where Produto_id=@id;";
@@ -100,7 +95,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                                     rowns = deleteUltimoConserto.ExecuteNonQuery();
 
                                 }
-
                                 // Atualiza a quantidade de consertos subtraindo 1
                                 string sqlUpdateQuantidadeConserto = "UPDATE Produto SET quantidade_conserto = quantidade_conserto - @rowns WHERE id=@idProduto;";
                                 MySqlCommand updateQuantidadeConserto = new MySqlCommand(sqlUpdateQuantidadeConserto, con);
@@ -109,10 +103,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                                 updateQuantidadeConserto.ExecuteNonQuery();
                             }
                         }
-
-
                         MessageBox.Show("Produto Excluido com sucesso !!!");
-
                     }
                 }
                 else
@@ -123,7 +114,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
 
             catch (MySqlException ex)
             {
-
                 Console.WriteLine($"Erro no banco de dados:\n\n{ex.Message}\n\nStackTrace:\n{ex.StackTrace}");
             }
             finally

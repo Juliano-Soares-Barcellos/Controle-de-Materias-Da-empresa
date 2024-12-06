@@ -18,7 +18,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             "Maio", "Junho", "Julho", "Agosto",
             "Setembro", "Outubro", "Novembro", "Dezembro"
         };
-
         private DataTable tabelaPivotada;
         public FiltroMes()
         {
@@ -33,15 +32,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             panel2.Visible = false;
             button2.Visible = true;
             BtnGrafico.Visible = false;
-
             this.panel3.Size = new System.Drawing.Size(756, 116);
             this.panel1.Size = new System.Drawing.Size(756, 626);
             this.Size = new System.Drawing.Size(770, 776);
             this.MaximumSize = new System.Drawing.Size(770, 776);
             this.MinimumSize = new System.Drawing.Size(770, 776);
-
             button2.Left = 300;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,31 +46,25 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             panel1.Visible = false;
             button2.Visible = false;
             BtnGrafico.Visible = true;
-
             this.panel3.Size = new System.Drawing.Size(510, 116);
             this.panel2.Size = new System.Drawing.Size(510, 661);
             this.Size = new System.Drawing.Size(529, 814);
             this.MaximumSize = new System.Drawing.Size(529, 814);
             this.MinimumSize = new System.Drawing.Size(529, 814);
             BtnGrafico.Left = 180;
-
-
         }
-   
+
         public object Obtermes(object MesesObjeto)
         {
-           
             if (MesesObjeto != null && int.TryParse(MesesObjeto.ToString(), out int ValorConvertido))
             {
-               
-               String Mes=Meses[ValorConvertido-1];
+                String Mes = Meses[ValorConvertido - 1];
                 return Mes;
             }
             else
             {
-
                 int NumeroMes = Meses.IndexOf(MesesObjeto.ToString());
-                return NumeroMes+1;
+                return NumeroMes + 1;
             }
         }
 
@@ -88,11 +78,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             String AnoString = TextAno.Text;
             String AnoString2 = Ano2.Text;
 
-
             if (MesNumero1 == 0 || MesNumero2 == 0 || cbxGrafico.SelectedIndex <= -1 || AnoString.Equals("") || AnoString2.Equals(""))
             {
                 MessageBox.Show("Por favor preencha todos os campos");
-
             }
             else
             {
@@ -125,21 +113,16 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                         String Mes = (String)Obtermes(data);
                         String MesVal = $"{Dados[i][0]}-{Mes}";
 
-
                         if (cbxGrafico.Text.Equals("Column"))
                         {
-
-
                             if (graficoBox.Series.Count <= 0)
                             {
                                 graficoBox.Series.Add(cbxGrafico.Text);
                             }
-                            
-                            Boolean acharMeses= !mesesArray.Contains(Mes)?true:false;
+
+                            Boolean acharMeses = !mesesArray.Contains(Mes) ? true : false;
                             graficoBox.Legends.Add(acharMeses ? $"{Mes}" : $"{Mes + 2}");
                             mesesArray.Add(Mes);
-
-
                             Series series = new Series(MesVal);
                             series.Points.Add(Double.Parse(Dados[i][0].ToString()));
                             series.LegendText = Mes;
@@ -164,16 +147,14 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                             Boolean acharMeses = !mesesArray.Contains(Mes) ? true : false;
                             graficoBox.Legends.Add(acharMeses ? $"{Mes}" : $"{Mes + 2}");
                             mesesArray.Add(Mes);
-
                             String QuantidadeJuntos = $"{Mes}";
-
                             graficoBox.Series[0].IsValueShownAsLabel = true;
                             graficoBox.Series[0].LabelFormat = "#,0";
-
                             Legend Generico = graficoBox.Legends[0];
                             Generico.Alignment = StringAlignment.Center;
                             Generico.Docking = Docking.Top;
                             graficoBox.Series[0].Points.AddXY(QuantidadeJuntos, Dados[i][0]);
+
                             if (Enum.TryParse(ItemCombo, out SeriesChartType chartType))
                             {
                                 graficoBox.Series[0].ChartType = chartType;
@@ -188,6 +169,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         {
             int AnoNao = comboBox1.SelectedIndex;
             int MesNao = comboBox2.SelectedIndex;
+
             if (AnoNao < 0 || MesNao < 0)
             {
                 MessageBox.Show("Por favor selecione os dois ComboBox: ");
@@ -196,14 +178,11 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             {
                 Object obterMeses = null;
                 obterMeses = (String)comboBox2.SelectedItem;
-
                 int mesEscolhido = (int)Obtermes(obterMeses);
-
                 String anoSelecionado = (String)comboBox1.SelectedItem;
-                int ano = Int32.Parse(anoSelecionado);
-
-
                 SelectFiltro selectFiltro = new SelectFiltro();
+                int ano = Convert.ToInt32(anoSelecionado);
+
                 string sql = "SELECT * FROM Produto as p inner join Conserto as _computadorSaida on p.id=_computadorSaida.Produto_id WHERE MONTH(DATE(_computadorSaida.Data)) = @Mes AND YEAR(DATE(_computadorSaida.Data)) = @Ano;";
                 Dados = selectFiltro.carregarTabela(mesEscolhido, ano, sql);
                 if (Dados.Count == 0)
@@ -226,14 +205,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                     int Headset = Produtos[0];
                     int Discador = Produtos[1];
                     int Carrapatos = Produtos[2];
-                 
                     Tabela.DataSource = tabelaPivotada;
                     MessageBox.Show("Total de Consertos neste mês: " + MesConserto + "\n" + "\n" +
                                     "Total de Headset: " + Headset + "\n" + "\n" +
                                     "total de Discadores : " + Discador + "\n" + "\n" +
                                     "Total de Carrapatos :  " + Carrapatos + "\n" + "\n" +
                                     "                   Informações do mês !!!");
-
                     label4.Visible = true;
                     label11.Visible = true;
                     label8.Visible = true;
@@ -257,8 +234,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 g.GravarCSV(tabelaPivotada);
             }
         }
-
-       
     }
 }
 

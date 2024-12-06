@@ -9,10 +9,8 @@ using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 {
-
     public partial class ArrastarArquivoCsv : Form
     {
-        
         private DataTable dataTable = new DataTable();
         public ArrastarArquivoCsv()
         {
@@ -47,11 +45,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 string message = "Deseja fazer o Backup? Digite 's' para sim ou 'n' para não:";
                 string caption = "Confirmação";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-
                 DialogResult result = MessageBox.Show(message, caption, buttons);
-
                 bool fazerBackup = (result == DialogResult.Yes);
-
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
                 if (files.Length > 0)
@@ -68,7 +63,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                         int quantidade = int.Parse(conserto);
                         string numero = arquivo[i][1].ToString();
                         Object[] encontrar = numeroDao.EncontrarNumero(numero);
-
                         if (encontrar.Length > 0)
                         {
                             string sql = "UPDATE Produto AS p  INNER JOIN Conserto as _computadorSaida on p.id=_computadorSaida.Produto_id set p.quantidade_conserto = p.quantidade_conserto+1  where p.Numero= @numero";
@@ -82,7 +76,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                             {
                                 encontrar[j] = null;
                             }
-
                         }
                         else
                         {
@@ -97,24 +90,23 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                                 carregamentoProgressBar(i, arquivo);
                             }
                         }
-
                     }
                     EnviarDadosDoArquivo();
 
                     MessageBox.Show("Arquivo Gravado com sucesso");
                     this.Close();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("por favor verificar o seu arquivo" + ex.Message);
             }
         }
-     
+
 
         private List<Object[]> ExibirDadosDoCSV(string caminhoArquivo)
         {
             List<Object[]> listaDados = new List<Object[]>();
-
             try
             {
                 dataTable.Clear();
@@ -141,7 +133,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             {
                 MessageBox.Show($"Erro ao ler o arquivo CSV: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             return listaDados;
         }
         private void ArrastarArquivoCsv_FormClosed(object sender, FormClosedEventArgs e)
@@ -158,7 +149,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
         private void EnviarDadosDoArquivo()
         {
-
             OnDadosEnviados(EventArgs.Empty);
         }
 

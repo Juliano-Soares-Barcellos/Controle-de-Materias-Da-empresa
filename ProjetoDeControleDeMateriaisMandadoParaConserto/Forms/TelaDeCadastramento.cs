@@ -1,11 +1,5 @@
 ﻿using ProjetoDeControleDeMateriaisMandadoParaConserto.Dao;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
@@ -116,13 +110,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         public Boolean ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConserto()
         {
             if (validaEntradaDadosText(TextoPatrimonio, TextBox1))
-                     return true;
+                return true;
             throw new Exception("Digite o Patrimonio ");
         }
         public Boolean ValidaSeNaoTemTextEmBrancoTelaHistóricoDoConsertoCombo()
         {
             if (validaEntradaDadosComboBox(TextoSistema, ComboSistemaHistorico))
-                     return true;
+                return true;
             throw new Exception("escolha o Sistema Operacional");
         }
 
@@ -173,7 +167,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 DialogResult result = MessageBox.Show(message, caption, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    RetiraDoConserto = new RetiraDoConserto(Tnome,maskedTextBox1,comboSistema, CheckBox);
+                    RetiraDoConserto = new RetiraDoConserto(Tnome, maskedTextBox1, comboSistema, CheckBox);
                 }
                 else
                 {
@@ -227,6 +221,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         {
             HistoricoDeConserto.check2();
         }
-    
+
     }
 }

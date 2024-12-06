@@ -1,12 +1,8 @@
 ﻿using ProjetoDeControleDeMateriaisMandadoParaConserto.Dao;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
@@ -30,9 +26,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
         private void BotaoFiltrar_Click(object sender, EventArgs e)
         {
-            empresa = Cempresa.SelectedItem==null? Cempresa.Text: Cempresa.SelectedItem.ToString();
+            empresa = Cempresa.SelectedItem == null ? Cempresa.Text : Cempresa.SelectedItem.ToString();
 
-            filtro = Cfiltro.SelectedItem==null?Cfiltro.Text :Cfiltro.SelectedItem.ToString();
+            filtro = Cfiltro.SelectedItem == null ? Cfiltro.Text : Cfiltro.SelectedItem.ToString();
 
             if (!filtro.Equals("") && !empresa.Equals(""))
             {
@@ -75,15 +71,15 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                     }
                     else
                     {
-                        if (Cfiltro.SelectedItem.Equals("setores") )
+                        if (Cfiltro.SelectedItem.Equals("setores"))
                         {
-                            if(comboboxSetores.Equals("todos") && empresa.Equals("Maximidia") )
+                            if (comboboxSetores.Equals("todos") && empresa.Equals("Maximidia"))
                             {
                                 tabela = computadoresMapeadosEconsertado.Dao.montarTabelasDao.Patrimonio(empresa, comboboxSetores, comboboxSetores);
                             }
                             else
                             {
-                                 tabela = computadoresMapeadosEconsertado.Dao.montarTabelasDao.Patrimonio(empresa, comboboxSetores, "grupos");
+                                tabela = computadoresMapeadosEconsertado.Dao.montarTabelasDao.Patrimonio(empresa, comboboxSetores, "grupos");
                             }
                             quantidadeSistemas.DataSource = map.QuantiSistemas(tabela);
                         }
@@ -107,8 +103,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             dataGridView.DataSource = tabela;
             quantidadeSistemas.DataSource = map.QuantiSistemas(tabela); ;
             panel4.Visible = false;
-            MaskBox.Text="";
-            CombSetores.SelectedItem=null;
+            MaskBox.Text = "";
+            CombSetores.SelectedItem = null;
 
         }
 
@@ -131,7 +127,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         public void carregaTabela()
         {
             tabela = computadoresMapeadosEconsertado.Dao.montarTabelasDao.Patrimonio("", "", "");
-            quantidadeSistemas.DataSource= map.QuantiSistemas(tabela);
+            quantidadeSistemas.DataSource = map.QuantiSistemas(tabela);
             //List<int> sistemas = map.quantiSistemas(tabela);
 
             //foreach (DataTable item in tabela.Rows)

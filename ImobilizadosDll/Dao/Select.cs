@@ -65,34 +65,33 @@ namespace ImobilizadosDll.Dao
         }
         public List<ImobilizadosModel> RetornaGruposImob(string Empresa, string resfiltro, string query)
         {
-       
-                using (var conexao = new Banco().conexao())
-                {
-                    conexao.Open();
-                    var resultados = conexao.Query<ImobilizadosModel, Grupos_paModel, classificacao_contabilModel, EmpresaModel, ImobilizadosModel>
-                   (
-                        query,
-                        (imobilizado, grupo, classificacao_contabil, empresa) =>
-                        {
-                            imobilizado.grupo = grupo;
-                            imobilizado.contabil = classificacao_contabil;
-                            imobilizado.empresa = empresa;
+            using (var conexao = new Banco().conexao())
+            {
+                conexao.Open();
+                var resultados = conexao.Query<ImobilizadosModel, Grupos_paModel, classificacao_contabilModel, EmpresaModel, ImobilizadosModel>
+                (
+                    query,
+                    (imobilizado, grupo, classificacao_contabil, empresa) =>
+                    {
+                        imobilizado.grupo = grupo;
+                        imobilizado.contabil = classificacao_contabil;
+                        imobilizado.empresa = empresa;
 
-                            return imobilizado;
-                        },
-                        new { empresa = Empresa, resfiltro = resfiltro },
-                         splitOn: "id_Imobilizado, id_grupo, Id_classificacao_contabil, id_empresas"
-                    );
-                    return resultados.ToList();
-                }
+                        return imobilizado;
+                    },
+                    new { empresa = Empresa, resfiltro = resfiltro },
+                        splitOn: "id_Imobilizado, id_grupo, Id_classificacao_contabil, id_empresas"
+                );
+                return resultados.ToList();
+            }
         }
 
         public List<ComputadorModel> RetornaGruposPc(string Empresa, string Resfiltro, string query)
         {
             using (var conexao = new Banco().conexao())
             {
-                conexao.Open();
-                var resultados = conexao.Query<ComputadorModel, PaModel, Grupos_paModel, ComputadorModel>
+               conexao.Open();
+               var resultados = conexao.Query<ComputadorModel, PaModel, Grupos_paModel, ComputadorModel>
                (
                     query,
                     (computador, pa, grupo) =>
@@ -189,9 +188,7 @@ namespace ImobilizadosDll.Dao
             using (var conexao = new Banco().conexao())
             {
                 conexao.Open();
-
                 var resultados = conexao.QueryFirstOrDefault<ComputadorModel>(query.RetornaPcFiltro, new { empresa ,pa});
-
                 return resultados;
             }
         }
@@ -202,9 +199,7 @@ namespace ImobilizadosDll.Dao
             using (var conexao = new Banco().conexao())
             {
                 conexao.Open();
-
                 var resultados = conexao.Query<ComputadorModel>(query.setorPc, new { empresa });
-
                 return resultados.ToList();
             }
         }

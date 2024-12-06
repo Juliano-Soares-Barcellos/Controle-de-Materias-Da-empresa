@@ -1,30 +1,1143 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
-<FxCopReport Version="15.0">
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Namespaces>
+  <Namespace Name="computadoresMapeadosEconsertado.consultas">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Considere mesclar os tipos definidos em "computadoresMapeadosEconsertado.consultas" com outro namespace.</Issue>
+    </Message>
+    <Message Id="computadores" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computadores' no nome de namespace 'computadoresMapeadosEconsertado.consultas' alterando-o para 'Computadores'.</Issue>
+    </Message>
+    <Message Id="consultas" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'consultas' no nome de namespace 'computadoresMapeadosEconsertado.consultas' alterando-o para 'Consultas'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="computadoresMapeadosEconsertado.Dao">
+   <Messages>
+    <Message Id="computadores" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computadores' no nome de namespace 'computadoresMapeadosEconsertado.Dao' alterando-o para 'Computadores'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="computadoresMapeadosEconsertado.model">
+   <Messages>
+    <Message Id="computadores" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computadores' no nome de namespace 'computadoresMapeadosEconsertado.model' alterando-o para 'Computadores'.</Issue>
+    </Message>
+    <Message Id="model" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'model' no nome de namespace 'computadoresMapeadosEconsertado.model' alterando-o para 'Model'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
  <Targets>
   <Target Name="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll">
    <Modules>
     <Module Name="computadoresmapeadoseconsertado.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Assine 'computadoresMapeadosEconsertado.dll' com uma chave de nome forte.</Issue>
+      </Message>
+      <Message Id="computadores" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computadores' no nome de assembly 'computadoresMapeadosEconsertado.dll' alterando-o para 'Computadores'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Marque 'computadoresMapeadosEconsertado.dll' com CLSCompliant(true) porque expõe externamente os tipos visíveis.</Issue>
+      </Message>
+     </Messages>
      <Namespaces>
+      <Namespace Name="computadoresMapeadosEconsertado.consultas">
+       <Types>
+        <Type Name="Query" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#acharPcDetalhado" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.acharPcDetalhado' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#acharPcsPeloSistema" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.acharPcsPeloSistema' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#atualizaModeloDoPc" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.atualizaModeloDoPc' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#buscaMapPc" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.buscaMapPc' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#computadores_consertados" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.computadores_consertados' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Condenar" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.Condenar' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#consertoFinalizado" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.consertoFinalizado' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeletePaTemp" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.DeletePaTemp' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#filtrossd" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.filtrossd' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#gruposFiltroCompMapeamento" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.gruposFiltroCompMapeamento' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#imobilizados" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.imobilizados' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#inserirComputador" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.inserirComputador' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InserirConsertoInicial" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.InserirConsertoInicial' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InserirTabelaTemp" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.InserirTabelaTemp' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LocalizacaoPa" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.LocalizacaoPa' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MapeamentoDePcs" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.MapeamentoDePcs' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#memoria" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.memoria' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#mudarParaTi" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.mudarParaTi' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#paFiltroCompMapeamento" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.paFiltroCompMapeamento' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PatrifiltroCompMapeamento" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.PatrifiltroCompMapeamento' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#processador" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.processador' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#quantidadePcGrupo" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.quantidadePcGrupo' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#queryAtualizacaoSistemaOpPc" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.queryAtualizacaoSistemaOpPc' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#retornarPaDeOrigem" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.retornarPaDeOrigem' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectTabelaTemp" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.selectTabelaTemp' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TagFiltroCompMapeamento" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.TagFiltroCompMapeamento' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TalkfiltroCompMapeamento" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.TalkfiltroCompMapeamento' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TodClub" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.TodClub' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TodfiltroCompMapeamento" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.TodfiltroCompMapeamento' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateNosPrograma" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Como o campo 'Query.UpdateNosPrograma' é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
       <Namespace Name="computadoresMapeadosEconsertado.Dao">
        <Types>
         <Type Name="computadorDao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computador' no nome de tipo 'computadorDao' alterando-o para 'Computador'.</Issue>
+          </Message>
+         </Messages>
          <Members>
+          <Member Name="#AcharPc(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="16">Corrija o uso de maiúsculas e minúsculas de 'Pc' no nome de membro 'computadorDao.AcharPc(string)' alterando-o para 'PC'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuscaComputadorConsertado()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="101">Altere 'List&lt;computadorComConsertos&gt;' em 'computadorDao.BuscaComputadorConsertado()' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="101">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.BuscaComputadorConsertado()' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuscaMapPc()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="45">Altere 'List&lt;computadorModel&gt;' em 'computadorDao.BuscaMapPc()' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="Pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="45">Corrija o uso de maiúsculas e minúsculas de 'Pc' no nome de membro 'computadorDao.BuscaMapPc()' alterando-o para 'PC'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuscaPAs()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="140">Altere 'List&lt;computadorModel&gt;' em 'computadorDao.BuscaPAs()' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="140">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.BuscaPAs()' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuscaPatrimonio(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="159">Altere 'List&lt;computadorComConsertos&gt;' em 'computadorDao.BuscaPatrimonio(string)' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="159">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.BuscaPatrimonio(string)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuscaPeloSistema(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="189">Altere 'List&lt;computadorComConsertos&gt;' em 'computadorDao.BuscaPeloSistema(string)' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="189">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.BuscaPeloSistema(string)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#condicao(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="condicao" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="298">Corrija o uso de maiúsculas e minúsculas de 'condicao' no nome de membro 'computadorDao.condicao(string)' alterando-o para 'Condicao'.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="298">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.condicao(string)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#depreciacao(System.DateTime,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="depreciacao" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="336">Corrija o uso de maiúsculas e minúsculas de 'depreciacao' no nome de membro 'computadorDao.depreciacao(DateTime, double)' alterando-o para 'Depreciacao'.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="336">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.depreciacao(DateTime, double)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FiltroMapInitFiltroMapInit(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="271">Altere 'List&lt;computadorModel&gt;' em 'computadorDao.FiltroMapInitFiltroMapInit(string)' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="271">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.FiltroMapInitFiltroMapInit(string)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FiltroMapPc(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="242">Altere 'List&lt;computadorModel&gt;' em 'computadorDao.FiltroMapPc(string, string, string)' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="Empresa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="242">No membro 'computadorDao.FiltroMapPc(string, string, string)', corrija o uso de maiúsculas e minúsculas de 'Empresa' no nome de parâmetro 'Empresa' alterando-o para 'empresa'.</Issue>
+            </Message>
+            <Message Id="Pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="242">Corrija o uso de maiúsculas e minúsculas de 'Pc' no nome de membro 'computadorDao.FiltroMapPc(string, string, string)' alterando-o para 'PC'.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="242">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.FiltroMapPc(string, string, string)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetValoresPropriedades(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="216">No membro 'computadorDao.GetValoresPropriedades(object)', recomenda-se substituir o identificador de tipo de dados 'obj' no nome de parâmetro 'obj' por um termo mais genérico, como 'value'.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="216">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.GetValoresPropriedades(object)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validar argumentos de métodos públicos" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="217">No método externamente visível 'computadorDao.GetValoresPropriedades(object)', valide o parâmetro "obj" antes de usá-lo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ObterDadosTemp(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="230">Altere 'List&lt;temp_conserto&gt;' em 'computadorDao.ObterDadosTemp(string)' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="230">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.ObterDadosTemp(string)' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#query" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Considere tornar 'computadorDao.query' não público ou uma constante.</Issue>
+            </Message>
+           </Messages>
+          </Member>
           <Member Name="#ssd()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2024-11-19 14:18:57Z" FixCategory="DependsOnFix">
-             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="79">A cadeia de caracteres de consulta passada para 'MySqlCommand.MySqlCommand(string, MySqlConnection)' em 'computadorDao.ssd()' pode conter as seguintes variáveis 'sql.filtrossd'. Se qualquer uma destas variáveis for proveniente da entrada do usuário, considere usar um procedimento armazenado ou uma consulta SQL parametrizada antes de compilar a consulta com concatenações de cadeias de caracteres.</Issue>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="75">No método 'computadorDao.ssd()', chame System.IDisposable.Dispose no objeto 'comando' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="65">Altere 'List&lt;object[]&gt;' em 'computadorDao.ssd()' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="91">'computadorDao.ssd()' cria uma exceção do tipo 'Exception', um tipo de exceção que nãoé específico o suficiente e nunca deve ser acionado pelo código do usuário. Se está instância de exceção puder ser acionada, use um tipo de exceção diferente.</Issue>
+            </Message>
+            <Message Id="ssd" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="65">Corrija o uso de maiúsculas e minúsculas de 'ssd' no nome de membro 'computadorDao.ssd()' alterando-o para 'Ssd'.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="65">O parâmetro 'this' (ou 'Me' no Visual Basic) de 'computadorDao.ssd()' nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Issue>
+            </Message>
+            <Message TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="computadorDao.cs" Line="75">A cadeia de caracteres de consulta passada para 'MySqlCommand.MySqlCommand(string, MySqlConnection)' em 'computadorDao.ssd()' pode conter as seguintes variáveis 'sql.filtrossd'. Se qualquer uma destas variáveis for proveniente da entrada do usuário, considere usar um procedimento armazenado ou uma consulta SQL parametrizada antes de compilar a consulta com concatenações de cadeias de caracteres.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="delete" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="delete" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'delete' no nome de tipo 'delete' alterando-o para 'Delete'.</Issue>
+          </Message>
+          <Message Id="delete" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Renomeie o tipo 'delete' de forma que ele não fique mais em conflito com a palavra-chave reservada de linguagem 'delete'. Se você usar uma palavra-chave reservada como o nome de um tipo, ficará mais difícil para os consumidores de outras linguagens utilizarem o tipo.</Issue>
+          </Message>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Como o tipo 'delete' contém somente membros "estáticos" ("Shared" no Visual Basic), adicione um construtor privado padrão para impedir que o compilador adicione um construtor público padrão.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#DeletePaTemporaria(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="delete.cs" Line="15">Corrija o uso de maiúsculas e minúsculas de 'Pa' no nome de membro 'delete.DeletePaTemporaria(string)' alterando-o para 'PA'.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
         <Type Name="InsersaoDao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Como o tipo 'InsersaoDao' contém somente membros "estáticos" ("Shared" no Visual Basic), adicione um construtor privado padrão para impedir que o compilador adicione um construtor público padrão.</Issue>
+          </Message>
+         </Messages>
          <Members>
+          <Member Name="#InserirComputador(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Tdescricao" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="18">No membro 'InsersaoDao.InserirComputador(string, string)', corrija o uso de maiúsculas e minúsculas de 'Tdescricao' no nome de parâmetro 'Tdescricao' alterando-o para 'tdescricao'.</Issue>
+            </Message>
+            <Message Id="Verificar" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="18">No membro 'InsersaoDao.InserirComputador(string, string)', corrija o uso de maiúsculas e minúsculas de 'Verificar' no nome de parâmetro 'VerificarId' alterando-o para 'verificar'.</Issue>
+            </Message>
+            <Message Id="linhasAfetadas" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="31">'InsersaoDao.InserirComputador(string, string)' declara uma variável, 'linhasAfetadas', do tipo 'int', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+            <Message Id="pc" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="20">'InsersaoDao.InserirComputador(string, string)' declara uma variável, 'pc', do tipo 'computador_conserto', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+           </Messages>
+          </Member>
           <Member Name="#inserirComputadorNovo(MySql.Data.MySqlClient.MySqlParameter[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2024-11-19 14:18:57Z" FixCategory="DependsOnFix">
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="66">Modifique 'InsersaoDao.inserirComputadorNovo(MySqlParameter[])' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message Id="inserir" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="53">Corrija o uso de maiúsculas e minúsculas de 'inserir' no nome de membro 'InsersaoDao.inserirComputadorNovo(MySqlParameter[])' alterando-o para 'Inserir'.</Issue>
+            </Message>
+            <Message TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="59">A cadeia de caracteres de consulta passada para 'MySqlCommand.MySqlCommand(string, MySqlConnection)' em 'InsersaoDao.inserirComputadorNovo(MySqlParameter[])' pode conter as seguintes variáveis 'query.inserirComputador'. Se qualquer uma destas variáveis for proveniente da entrada do usuário, considere usar um procedimento armazenado ou uma consulta SQL parametrizada antes de compilar a consulta com concatenações de cadeias de caracteres.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InserirPaTabelaTemp(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="36">Corrija o uso de maiúsculas e minúsculas de 'Pa' no nome de membro 'InsersaoDao.InserirPaTabelaTemp(string, string)' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="36">No membro 'InsersaoDao.InserirPaTabelaTemp(string, string)', corrija o uso de maiúsculas e minúsculas de 'computador' no nome de parâmetro 'fk_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="36">No membro 'InsersaoDao.InserirPaTabelaTemp(string, string)', corrija o uso de maiúsculas e minúsculas de 'pa' no nome de parâmetro 'fk_pa' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="36">No membro 'InsersaoDao.InserirPaTabelaTemp(string, string)', remova os sublinhados do nome de parâmetro 'fk_computador'.</Issue>
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="36">No membro 'InsersaoDao.InserirPaTabelaTemp(string, string)', remova os sublinhados do nome de parâmetro 'fk_pa'.</Issue>
+            </Message>
+            <Message Id="linhasAfetadas" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="48">'InsersaoDao.InserirPaTabelaTemp(string, string)' declara uma variável, 'linhasAfetadas', do tipo 'int', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+            <Message Id="pc" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="InsersaoDao.cs" Line="38">'InsersaoDao.InserirPaTabelaTemp(string, string)' declara uma variável, 'pc', do tipo 'computador_conserto', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="montarTabelasDao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="montar" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'montar' no nome de tipo 'montarTabelasDao' alterando-o para 'Montar'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#MontarTabela(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="263">No método 'montarTabelasDao.MontarTabela(string)', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="294">Modifique 'montarTabelasDao.MontarTabela(string)' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="263">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.MontarTabela(string)' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PasOperacao()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="376">No método 'montarTabelasDao.PasOperacao()', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="395">Modifique 'montarTabelasDao.PasOperacao()' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="376">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.PasOperacao()' criar uma instância desse tipo.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="388">Como o comportamento de 'int.ToString()' pode variar de acordo com as configurações de localidade atuais do usuário, substitua esta chamada em 'montarTabelasDao.PasOperacao()' por uma chamada para 'int.ToString(IFormatProvider)'. Se o resultado de 'int.ToString(IFormatProvider)' for exibido ao usuário, especifique 'CultureInfo.CurrentCulture' como o parâmetro "IFormatProvider". Caso contrário, se o resultado for armazenado e acessado pelo software, como quando persiste em disco ou em um banco de dados, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Patrimonio(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="319">No método 'montarTabelasDao.Patrimonio(string, string, string)', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="364">Modifique 'montarTabelasDao.Patrimonio(string, string, string)' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="319">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.Patrimonio(string, string, string)' criar uma instância desse tipo.</Issue>
+            </Message>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="344">Como o comportamento de 'DateTime.ToString(string)' pode variar de acordo com as configurações de localidade atuais do usuário, substitua esta chamada em 'montarTabelasDao.Patrimonio(string, string, string)' por uma chamada para 'DateTime.ToString(string, IFormatProvider)'. Se o resultado de 'DateTime.ToString(string, IFormatProvider)' for exibido ao usuário, especifique 'CultureInfo.CurrentCulture' como o parâmetro "IFormatProvider". Caso contrário, se o resultado for armazenado e acessado pelo software, como quando persiste em disco ou em um banco de dados, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="309">Substitua a chamada para 'string.Equals(string)' em 'montarTabelasDao.Patrimonio(string, string, string)' por uma chamada para 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+            <Message Id="2" TypeName="Validar argumentos de métodos públicos" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="309">No método externamente visível 'montarTabelasDao.Patrimonio(string, string, string)', valide o parâmetro "coluna" antes de usá-lo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pc" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Warning">Considere tornar 'montarTabelasDao.pc' não público ou uma constante.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#retornaPcTabelaPatrimonio(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="94">No método 'montarTabelasDao.retornaPcTabelaPatrimonio(string)', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="125">Modifique 'montarTabelasDao.retornaPcTabelaPatrimonio(string)' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message Id="Pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="91">Corrija o uso de maiúsculas e minúsculas de 'Pc' no nome de membro 'montarTabelasDao.retornaPcTabelaPatrimonio(string)' alterando-o para 'PC'.</Issue>
+            </Message>
+            <Message Id="retorna" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="91">Corrija o uso de maiúsculas e minúsculas de 'retorna' no nome de membro 'montarTabelasDao.retornaPcTabelaPatrimonio(string)' alterando-o para 'Retorna'.</Issue>
+            </Message>
+            <Message Id="cp" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="92">'montarTabelasDao.retornaPcTabelaPatrimonio(string)' declara uma variável, 'cp', do tipo 'computadorDao', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="94">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.retornaPcTabelaPatrimonio(string)' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#retornaTudoSobrePc(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="136">No método 'montarTabelasDao.retornaTudoSobrePc(string)', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="188">Modifique 'montarTabelasDao.retornaTudoSobrePc(string)' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message Id="Pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="133">Corrija o uso de maiúsculas e minúsculas de 'Pc' no nome de membro 'montarTabelasDao.retornaTudoSobrePc(string)' alterando-o para 'PC'.</Issue>
+            </Message>
+            <Message Id="retorna" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="133">Corrija o uso de maiúsculas e minúsculas de 'retorna' no nome de membro 'montarTabelasDao.retornaTudoSobrePc(string)' alterando-o para 'Retorna'.</Issue>
+            </Message>
+            <Message Id="cp" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="134">'montarTabelasDao.retornaTudoSobrePc(string)' declara uma variável, 'cp', do tipo 'computadorDao', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="136">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.retornaTudoSobrePc(string)' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Ssd()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="200">No método 'montarTabelasDao.Ssd()', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="225">Modifique 'montarTabelasDao.Ssd()' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message Id="cp" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="198">'montarTabelasDao.Ssd()' declara uma variável, 'cp', do tipo 'computadorDao', que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="200">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.Ssd()' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TabelaConserto()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="20">No método 'montarTabelasDao.TabelaConserto()', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="49">Modifique 'montarTabelasDao.TabelaConserto()' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="20">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.TabelaConserto()' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TabelaPas()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="59">No método 'montarTabelasDao.TabelaPas()', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="84">Modifique 'montarTabelasDao.TabelaPas()' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="59">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.TabelaPas()' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TabelaTemp(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="236">No método 'montarTabelasDao.TabelaTemp(string)', o objeto 'tabela' não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto 'tabela' antes que todas as referências a ele fiquem fora do escopo.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="253">Modifique 'montarTabelasDao.TabelaTemp(string)' para capturar uma exceção mais específica que 'Exception' ou relançar a exceção.</Issue>
+            </Message>
+            <Message Id="pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="234">No membro 'montarTabelasDao.TabelaTemp(string)', corrija o uso de maiúsculas e minúsculas de 'pc' no nome de parâmetro 'id_pc' alterando-o para 'PC'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="234">No membro 'montarTabelasDao.TabelaTemp(string)', remova os sublinhados do nome de parâmetro 'id_pc'.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="montarTabelasDao.cs" Line="236">Defina a propriedade DataTable Locale sempre que 'montarTabelasDao.TabelaTemp(string)' criar uma instância desse tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UpdateDao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Como o tipo 'UpdateDao' contém somente membros "estáticos" ("Shared" no Visual Basic), adicione um construtor privado padrão para impedir que o compilador adicione um construtor público padrão.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Condenar(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="91">No membro 'UpdateDao.Condenar(string)', corrija o uso de maiúsculas e minúsculas de 'computador' no nome de parâmetro 'id_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="91">No membro 'UpdateDao.Condenar(string)', remova os sublinhados do nome de parâmetro 'id_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InseririModelo(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="106">No membro 'UpdateDao.InseririModelo(string, string)', corrija o uso de maiúsculas e minúsculas de 'computador' no nome de parâmetro 'id_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="106">No membro 'UpdateDao.InseririModelo(string, string)', remova os sublinhados do nome de parâmetro 'id_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#retornarPaOrigem(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="76">Corrija o uso de maiúsculas e minúsculas de 'Pa' no nome de membro 'UpdateDao.retornarPaOrigem(string, string)' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="76">No membro 'UpdateDao.retornarPaOrigem(string, string)', corrija o uso de maiúsculas e minúsculas de 'computador' no nome de parâmetro 'id_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="76">No membro 'UpdateDao.retornarPaOrigem(string, string)', corrija o uso de maiúsculas e minúsculas de 'pa' no nome de parâmetro 'fk_pa' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message Id="retornar" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="76">Corrija o uso de maiúsculas e minúsculas de 'retornar' no nome de membro 'UpdateDao.retornarPaOrigem(string, string)' alterando-o para 'Retornar'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="76">No membro 'UpdateDao.retornarPaOrigem(string, string)', remova os sublinhados do nome de parâmetro 'fk_pa'.</Issue>
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="76">No membro 'UpdateDao.retornarPaOrigem(string, string)', remova os sublinhados do nome de parâmetro 'id_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updatePaTi(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="62">Corrija o uso de maiúsculas e minúsculas de 'Pa' no nome de membro 'UpdateDao.updatePaTi(string)' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message Id="Ti" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="62">Corrija o uso de maiúsculas e minúsculas de 'Ti' no nome de membro 'UpdateDao.updatePaTi(string)' alterando-o para 'TI'.</Issue>
+            </Message>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="62">No membro 'UpdateDao.updatePaTi(string)', corrija o uso de maiúsculas e minúsculas de 'computador' no nome de parâmetro 'id_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message Id="update" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="62">Corrija o uso de maiúsculas e minúsculas de 'update' no nome de membro 'UpdateDao.updatePaTi(string)' alterando-o para 'Update'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="62">No membro 'UpdateDao.updatePaTi(string)', remova os sublinhados do nome de parâmetro 'id_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updateProgramasPc(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="47">Corrija o uso de maiúsculas e minúsculas de 'Pc' no nome de membro 'UpdateDao.updateProgramasPc(string, string)' alterando-o para 'PC'.</Issue>
+            </Message>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="47">No membro 'UpdateDao.updateProgramasPc(string, string)', corrija o uso de maiúsculas e minúsculas de 'computador' no nome de parâmetro 'id_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message Id="update" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="47">Corrija o uso de maiúsculas e minúsculas de 'update' no nome de membro 'UpdateDao.updateProgramasPc(string, string)' alterando-o para 'Update'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\Dao" File="UpdateDao.cs" Line="47">No membro 'UpdateDao.updateProgramasPc(string, string)', remova os sublinhados do nome de parâmetro 'id_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="computadoresMapeadosEconsertado.model">
+       <Types>
+        <Type Name="computador_conserto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computador' no nome de tipo 'computador_conserto' alterando-o para 'Computador'.</Issue>
+          </Message>
+          <Message Id="conserto" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'conserto' no nome de tipo 'computador_conserto' alterando-o para 'Conserto'.</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Remova os sublinhados do nome de tipo 'computador_conserto'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#data_conserto_finalizado" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="conserto" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="21">Corrija o uso de maiúsculas e minúsculas de 'conserto' no nome de membro 'computador_conserto.data_conserto_finalizado' alterando-o para 'Conserto'.</Issue>
+            </Message>
+            <Message Id="data" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="21">Corrija o uso de maiúsculas e minúsculas de 'data' no nome de membro 'computador_conserto.data_conserto_finalizado' alterando-o para 'Data'.</Issue>
+            </Message>
+            <Message Id="finalizado" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="21">Corrija o uso de maiúsculas e minúsculas de 'finalizado' no nome de membro 'computador_conserto.data_conserto_finalizado' alterando-o para 'Finalizado'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="21">Remova os sublinhados do nome de membro 'computador_conserto.data_conserto_finalizado'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#data_entrada" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="data" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="13">Corrija o uso de maiúsculas e minúsculas de 'data' no nome de membro 'computador_conserto.data_entrada' alterando-o para 'Data'.</Issue>
+            </Message>
+            <Message Id="entrada" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="13">Corrija o uso de maiúsculas e minúsculas de 'entrada' no nome de membro 'computador_conserto.data_entrada' alterando-o para 'Entrada'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="13">Remova os sublinhados do nome de membro 'computador_conserto.data_entrada'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descricao_problema" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="problema" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="15">Corrija o uso de maiúsculas e minúsculas de 'problema' no nome de membro 'computador_conserto.Descricao_problema' alterando-o para 'Problema'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="15">Remova os sublinhados do nome de membro 'computador_conserto.Descricao_problema'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#descricao_problema_resolvido" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="descricao" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="19">Corrija o uso de maiúsculas e minúsculas de 'descricao' no nome de membro 'computador_conserto.descricao_problema_resolvido' alterando-o para 'Descricao'.</Issue>
+            </Message>
+            <Message Id="problema" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="19">Corrija o uso de maiúsculas e minúsculas de 'problema' no nome de membro 'computador_conserto.descricao_problema_resolvido' alterando-o para 'Problema'.</Issue>
+            </Message>
+            <Message Id="resolvido" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="19">Corrija o uso de maiúsculas e minúsculas de 'resolvido' no nome de membro 'computador_conserto.descricao_problema_resolvido' alterando-o para 'Resolvido'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="19">Remova os sublinhados do nome de membro 'computador_conserto.descricao_problema_resolvido'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fkComputador" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="fk" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="17">Corrija o uso de maiúsculas e minúsculas de 'fk' no nome de membro 'computador_conserto.fkComputador' alterando-o para 'FK'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#id_conserto" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="conserto" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'conserto' no nome de membro 'computador_conserto.id_conserto' alterando-o para 'Conserto'.</Issue>
+            </Message>
+            <Message Id="id" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'id' no nome de membro 'computador_conserto.id_conserto' alterando-o para 'Id'. 'Id' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computador_conserto.cs" Line="11">Remova os sublinhados do nome de membro 'computador_conserto.id_conserto'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="computadorComConsertos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computador' no nome de tipo 'computadorComConsertos' alterando-o para 'Computador'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Conserto" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorComConsertos.cs" Line="12">Altere 'computadorComConsertos.Conserto' para somente leitura ao remover o setter da propriedade.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorComConsertos.cs" Line="12">Altere 'List&lt;computador_conserto&gt;' em 'computadorComConsertos.Conserto' para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="computadorModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'computador' no nome de tipo 'computadorModel' alterando-o para 'Computador'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#empresa" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="empresa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="28">Corrija o uso de maiúsculas e minúsculas de 'empresa' no nome de membro 'computadorModel.empresa' alterando-o para 'Empresa'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fk_compComputador_Pa" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="24">Corrija o uso de maiúsculas e minúsculas de 'Pa' no nome de membro 'computadorModel.fk_compComputador_Pa' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message Id="comp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="24">Corrija o uso de maiúsculas e minúsculas de 'comp' no nome de membro 'computadorModel.fk_compComputador_Pa' alterando-o para 'Comp'.</Issue>
+            </Message>
+            <Message Id="fk" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="24">Corrija o uso de maiúsculas e minúsculas de 'fk' no nome de membro 'computadorModel.fk_compComputador_Pa' alterando-o para 'FK'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="24">Remova os sublinhados do nome de membro 'computadorModel.fk_compComputador_Pa'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#id_computador" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="12">Corrija o uso de maiúsculas e minúsculas de 'computador' no nome de membro 'computadorModel.id_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message Id="id" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="12">Corrija o uso de maiúsculas e minúsculas de 'id' no nome de membro 'computadorModel.id_computador' alterando-o para 'Id'. 'Id' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="12">Remova os sublinhados do nome de membro 'computadorModel.id_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#marca" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="marca" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="17">Corrija o uso de maiúsculas e minúsculas de 'marca' no nome de membro 'computadorModel.marca' alterando-o para 'Marca'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NomeDaMaquina" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Da" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="18">Corrija o uso de maiúsculas e minúsculas de 'Da' no nome de membro 'computadorModel.NomeDaMaquina' alterando-o para 'DA'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#patrimonio" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="patrimonio" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="15">Corrija o uso de maiúsculas e minúsculas de 'patrimonio' no nome de membro 'computadorModel.patrimonio' alterando-o para 'Patrimonio'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#processador" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="processador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="30">Corrija o uso de maiúsculas e minúsculas de 'processador' no nome de membro 'computadorModel.processador' alterando-o para 'Processador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#programa" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="programa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="20">Corrija o uso de maiúsculas e minúsculas de 'programa' no nome de membro 'computadorModel.programa' alterando-o para 'Programa'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#sistemasOperacionais" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="sistemas" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="22">Corrija o uso de maiúsculas e minúsculas de 'sistemas' no nome de membro 'computadorModel.sistemasOperacionais' alterando-o para 'Sistemas'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tag_servico" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="servico" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="26">Corrija o uso de maiúsculas e minúsculas de 'servico' no nome de membro 'computadorModel.tag_servico' alterando-o para 'Servico'.</Issue>
+            </Message>
+            <Message Id="tag" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="26">Corrija o uso de maiúsculas e minúsculas de 'tag' no nome de membro 'computadorModel.tag_servico' alterando-o para 'Tag'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="26">Remova os sublinhados do nome de membro 'computadorModel.tag_servico'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Tipo_Memoria" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="37">Remova os sublinhados do nome de membro 'computadorModel.Tipo_Memoria'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#valor" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="valor" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="computadorModel.cs" Line="32">Corrija o uso de maiúsculas e minúsculas de 'valor' no nome de membro 'computadorModel.valor' alterando-o para 'Valor'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="grupos_pa" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="grupos" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'grupos' no nome de tipo 'grupos_pa' alterando-o para 'Grupos'.</Issue>
+          </Message>
+          <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'pa' no nome de tipo 'grupos_pa' alterando-o para 'PA'.</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Remova os sublinhados do nome de tipo 'grupos_pa'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#grupos" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="grupos" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="grupos_pa.cs" Line="12">Corrija o uso de maiúsculas e minúsculas de 'grupos' no nome de membro 'grupos_pa.grupos' alterando-o para 'Grupos'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#id_grupo" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="grupo" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="grupos_pa.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'grupo' no nome de membro 'grupos_pa.id_grupo' alterando-o para 'Grupo'.</Issue>
+            </Message>
+            <Message Id="id" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="grupos_pa.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'id' no nome de membro 'grupos_pa.id_grupo' alterando-o para 'Id'. 'Id' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="grupos_pa.cs" Line="11">Remova os sublinhados do nome de membro 'grupos_pa.id_grupo'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="paModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'pa' no nome de tipo 'paModel' alterando-o para 'PA'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Fk_gurupoModel" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Fk" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="13">Corrija o uso de maiúsculas e minúsculas de 'Fk' no nome de membro 'paModel.Fk_gurupoModel' alterando-o para 'FK'.</Issue>
+            </Message>
+            <Message Id="gurupo" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="13">Corrija o uso de maiúsculas e minúsculas de 'gurupo' no nome de membro 'paModel.Fk_gurupoModel' alterando-o para 'Gurupo'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="13">Remova os sublinhados do nome de membro 'paModel.Fk_gurupoModel'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#id_pa" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="id" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'id' no nome de membro 'paModel.id_pa' alterando-o para 'Id'. 'Id' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Issue>
+            </Message>
+            <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'pa' no nome de membro 'paModel.id_pa' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="11">Remova os sublinhados do nome de membro 'paModel.id_pa'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#pa" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="12">Corrija o uso de maiúsculas e minúsculas de 'pa' no nome de membro 'paModel.pa' alterando-o para 'PA'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#talk_id" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="id" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="14">Corrija o uso de maiúsculas e minúsculas de 'id' no nome de membro 'paModel.talk_id' alterando-o para 'Id'. 'Id' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Issue>
+            </Message>
+            <Message Id="talk" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="14">Corrija o uso de maiúsculas e minúsculas de 'talk' no nome de membro 'paModel.talk_id' alterando-o para 'Talk'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="paModel.cs" Line="14">Remova os sublinhados do nome de membro 'paModel.talk_id'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="temp_conserto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="conserto" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'conserto' no nome de tipo 'temp_conserto' alterando-o para 'Conserto'.</Issue>
+          </Message>
+          <Message Id="temp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija o uso de maiúsculas e minúsculas de 'temp' no nome de tipo 'temp_conserto' alterando-o para 'Temp'.</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Remova os sublinhados do nome de tipo 'temp_conserto'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#fk_computador" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="computador" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="13">Corrija o uso de maiúsculas e minúsculas de 'computador' no nome de membro 'temp_conserto.fk_computador' alterando-o para 'Computador'.</Issue>
+            </Message>
+            <Message Id="fk" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="13">Corrija o uso de maiúsculas e minúsculas de 'fk' no nome de membro 'temp_conserto.fk_computador' alterando-o para 'FK'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="13">Remova os sublinhados do nome de membro 'temp_conserto.fk_computador'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#fk_pa" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="fk" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="15">Corrija o uso de maiúsculas e minúsculas de 'fk' no nome de membro 'temp_conserto.fk_pa' alterando-o para 'FK'.</Issue>
+            </Message>
+            <Message Id="pa" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="15">Corrija o uso de maiúsculas e minúsculas de 'pa' no nome de membro 'temp_conserto.fk_pa' alterando-o para 'PA'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="15">Remova os sublinhados do nome de membro 'temp_conserto.fk_pa'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#id_tempConserto" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="id" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="MemberAbbreviation" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'id' no nome de membro 'temp_conserto.id_tempConserto' alterando-o para 'Id'. 'Id' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Issue>
+            </Message>
+            <Message Id="temp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="11">Corrija o uso de maiúsculas e minúsculas de 'temp' no nome de membro 'temp_conserto.id_tempConserto' alterando-o para 'Temp'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2024-12-06 21:13:58Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\model" File="temp_conserto.cs" Line="11">Remova os sublinhados do nome de membro 'temp_conserto.id_tempConserto'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -38,6 +1151,174 @@
   </Target>
  </Targets>
  <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies devem ter nomes fortes válidos</Name>
+   <Description>Ou o assembly não possui um nome forte, um nome inválido, ou o nome forte é válido somente devido à configuração do computador. O assembly não deve ser implantado nesse estado. As causas mais comuns para isso são: 1) O conteúdo do assembly foi modificado depois de ser assinado. 2) O processo de assinatura falhou. 3) O assembly teve a assinatura atrasada. 4) Havia uma chave de registro que permitiu a aprovação na verificação (onde não seria aprovada de outra forma).</Description>
+   <Resolution Name="NoStrongName">Assine {0} com uma chave de nome forte.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>Evitar namespaces com poucos tipos</Name>
+   <Description>Um namespace deve geralmente ter mais de cinco tipos.</Description>
+   <Resolution Name="Default">Considere mesclar os tipos definidos em "{0}" com outro namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Propriedades de coleção devem ser somente leitura</Name>
+   <Description>Propriedades que retornam coleções devem ser somente leitura para que os usuários não possam substituir o repositório de backup integralmente. Os usuários anda podem modificar o conteúdo da coleção ao chamar métodos relevantes na coleção. Observe que a classe XmlSerializer possui suporte especial para desserializar coleções somente leitura. Consulte a visão geral de XmlSerializer para obter mais informações.</Description>
+   <Resolution Name="Default">Altere {0} para somente leitura ao remover o setter da propriedade.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Descartar objetos antes de perder o escopo" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Descartar objetos antes de perder o escopo</Name>
+   <Description>Se um objeto descartável não for explicitamente descartado antes de todas as referências a ele ficarem fora do escopo, o objeto será descartado em um momento indeterminado quando o coletor de lixo executar o finalizador do objeto. Como pode ocorrer um evento excepcional que impedirá a execução do finalizador do objeto, o objeto deverá ser explicitamente descartado.</Description>
+   <Resolution Name="ExceptionEdge">No método {0}, o objeto {1} não é descartado juntamente com todos os caminhos de exceção. Chame System.IDisposable.Dispose no objeto {1} antes que todas as referências a ele fiquem fora do escopo.</Resolution>
+   <Resolution Name="NonExceptionEdge">No método {0}, chame System.IDisposable.Dispose no objeto {1} antes que todas as referências a ele fiquem fora do escopo.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Não capturar tipos de exceção geral</Name>
+   <Description>Você não deve capturar Exception nem SystemException. Capturar tipos de exceção genéricos pode ocultar problemas de tempo de execução do usuário da biblioteca e complicar a depuração. Você deve capturar somente as exceções com as quais pode lidar sem problemas.</Description>
+   <Resolution Name="Default">Modifique {0} para capturar uma exceção mais específica que {1} ou relançar a exceção.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Não declarar campos de instância visíveis</Name>
+   <Description>Os campos de instância que são visíveis fora do tipo que os declara, limite sua capacidade de alterar os detalhes da implementação para esses itens de dados. Use propriedades. Elas não comprometem a usabilidade nem o desempenho e fornecem flexibilidade para ocultar os detalhes da implementação dos dados subjacentes.</Description>
+   <Resolution Name="Default">Como o campo {0} é visível fora de seu tipo declarativo, altere sua acessibilidade para privada e adicione um propriedade, com a mesma acessibilidade que o campo tem atualmente para fornecer acesso a ele.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Não expor listas genéricas</Name>
+   <Description>Não exponha List&lt;T&gt; em modelos de objeto. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;. List&lt;T&gt; deve ser usado na implementação, não na API do modelo de objeto. List&lt;T&gt; é otimizado para desempenho pelo custo do controle de versão de longo prazo. Por exemplo, se você retornar List&lt;T&gt; para o código de cliente, você nunca poderá receber notificações quando o código de cliente modificar a coleção.</Description>
+   <Resolution Name="Default">Altere {0} em {1} para usar Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; ou KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+   <Name>Não gerar tipos de exceção reservados</Name>
+   <Description>O código de usuário não deve criar nem acionar exceções de determinados tipos reservados pelo runtime ou que são de um tipo de exceção geral demais. Tipos de exceção que são gerais demais incluem Exception, SystemException e ApplicationException. Tipos de exceção que são reservados pelo runtime incluem ThreadAbortException, OutOfMemoryException, ExecutionEngineException e IndexOutOfRangeException.</Description>
+   <Resolution Name="TooGeneric">{0} cria uma exceção do tipo {1}, um tipo de exceção que nãoé específico o suficiente e nunca deve ser acionado pelo código do usuário. Se está instância de exceção puder ser acionada, use um tipo de exceção diferente.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182338.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identificadores devem ter a grafia correta de maiúsculas e minúsculas</Name>
+   <Description>Os identificadores de tipo, namespace e membro seguem o padrão Pascal-Case. Os identificadores de parâmetro seguem o padrão Camel-Case. Acrônimos de duas letras nesses identificadores devem seguir o padrão Upper-Case; por exemplo, use System.IO em vez de System.Io. Acrônimos de três ou mais letras devem seguir o padrão Pascal-Case; por exemplo, use System.Xml em vez de System.XML. Na convenção Pascal-Case, a primeira letra de cada palavra fica em maiúscula, como em BackColor. Na convenção Camel-Case, a primeira letra da primeira palavra fica em minúscula e a primeira letra de todas as palavras subsequentes fica em maiúscula, como em backgroundColor. Embora seja prática comum que alguns acrônimos de duas letras não fiquem totalmente em maiúsculas, violações desta regra não devem ser excluídas por esse motivo. Por exemplo, 'DbConnection' é comum, mas incorreto; use DBConnection. Uma violação dessa regra poderá ser necessária para fins de compatibilidade com esquemas de símbolos não gerenciados existentes. Porém, de modo geral, é recomendável que esses símbolos não fiquem visíveis fora do assembly que os utiliza.</Description>
+   <Resolution Name="Assembly">Corrija o uso de maiúsculas e minúsculas de '{0}' no nome de assembly {1} alterando-o para '{2}'.</Resolution>
+   <Resolution Name="Member">Corrija o uso de maiúsculas e minúsculas de '{0}' no nome de membro {1} alterando-o para '{2}'.</Resolution>
+   <Resolution Name="MemberAbbreviation">Corrija o uso de maiúsculas e minúsculas de '{0}' no nome de membro {1} alterando-o para '{2}'. '{2}' é uma abreviação e, portanto, não está sujeita às regras de uso de maiúsculas em acrônimos.</Resolution>
+   <Resolution Name="MemberParameter">No membro {0}, corrija o uso de maiúsculas e minúsculas de '{1}' no nome de parâmetro {2} alterando-o para '{3}'.</Resolution>
+   <Resolution Name="Namespace">Corrija o uso de maiúsculas e minúsculas de '{0}' no nome de namespace '{1}' alterando-o para '{2}'.</Resolution>
+   <Resolution Name="Type">Corrija o uso de maiúsculas e minúsculas de '{0}' no nome de tipo {1} alterando-o para '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+   <Name>Identificadores não devem conter nomes de tipos</Name>
+   <Description>Evite usar nomes de tipos específicos a uma linguagem em parâmetros e membros, bem como identificadores de tipos de dados em parâmetros. Os nomes de tipos podem não ser intuitivos para todos os desenvolvedores. Recomenda-se selecionar um nome genérico, como 'value'. Se isso não for suficiente, use o nome de tipo conforme definido na Biblioteca do .NET Framework e evite completamente os nomes de tipos específicos a uma linguagem. Alguns exemplos de nomes de tipos específicos ao C# são 'float' (use 'Single' se um nome genérico não for suficiente) e 'ulong' (use 'UInt64' se um nome genérico não for suficiente).</Description>
+   <Resolution Name="LanguageIndependentMemberParameter">No membro {0}, recomenda-se substituir o identificador de tipo de dados '{1}' no nome de parâmetro {2} por um termo mais genérico, como 'value'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb531486.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identificadores não devem conter sublinhados</Name>
+   <Description>Não use sublinhados ao especificar identificadores. Alguns identificadores do Visual Studio gerados para aplicativos contêm caracteres de sublinhado. Em geral, convém evitar esses caracteres em identificadores públicos.</Description>
+   <Resolution Name="Member">Remova os sublinhados do nome de membro {0}.</Resolution>
+   <Resolution Name="MemberParameter">No membro {0}, remova os sublinhados do nome de parâmetro {1}.</Resolution>
+   <Resolution Name="Type">Remova os sublinhados do nome de tipo {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+   <Name>Identificadores não devem corresponder a palavras-chave</Name>
+   <Description>Deve-se evitar identificadores que entrem em conflito com palavras-chave reservadas de linguagens. Se você usar uma palavra-chave reservada como identificador, ficará mais difícil para os consumidores de outras linguagens utilizarem a sua API.</Description>
+   <Resolution Name="Type">Renomeie o tipo {0} de forma que ele não fique mais em conflito com a palavra-chave reservada de linguagem '{1}'. Se você usar uma palavra-chave reservada como o nome de um tipo, ficará mais difícil para os consumidores de outras linguagens utilizarem o tipo.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182248.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Marcar assemblies com CLSCompliantAttribute</Name>
+   <Description>Os assemblies devem indicar explicitamente sua conformidade com CLS usando o atributo CLSCompliant. Um assembly sem esse atributo não é compatível com CLS. Assemblies, módulos e tipos podem ser compatíveis com CLS mesmo se algumas partes do assembly, módulo ou tipo não forem compatíveis com CLS. As seguintes regras se aplicam: 1) Se o elemento for marcado com CLSCompliant, os membros fora de conformidade deverão ter o atributo CLSCompliant presente com seu argumento definido como false. 2) Um membro alternativo comparável em conformidade com CLS deve ser fornecido para cada membro que não esteja em conformidade com CLS.</Description>
+   <Resolution Name="Default">Marque {0} com CLSCompliant(true) porque expõe externamente os tipos visíveis.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Marque membros como estáticos</Name>
+   <Description>Métodos que não acessam dados de instâncias ou não chamam métodos de instâncias podem ser marcados como estáticos (Compartilhados no Visual Basic). Depois de fazer isso, o compilador emitirá sites de chamadas não virtuais para esses membros, o que evitará uma verificação no tempo de execução para cada chamada que assegurar que o ponteiro de objeto atual é não nulo. Isso pode resultar em um ganho de desempenho mensurável para código sensível ao desempenho. Em alguns casos, a falha em acessar a instância de objeto atual representa um problema de exatidão.</Description>
+   <Resolution Name="Default">O parâmetro 'this' (ou 'Me' no Visual Basic) de {0} nunca é usado. Marque o membro como estático (ou Compartilhado no Visual Basic) ou use 'this'/'Me' no corpo do método ou pelo menos um acessador de propriedade, se for adequado.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">
+   <Name>Campos não constantes não devem ser visíveis</Name>
+   <Description>Campos estáticos devem ser constantes, a menos que você gerencie cuidadosamente o acesso ao campo usando bloqueios. Usar variáveis estáticas sem torná-las seguras para thread pode comprometer o estado da execução. Esta regra aplica-se a bibliotecas de código gerenciadas. Se o assembly analisado é um aplicativo, é normalmente seguro excluir violações desta regra.</Description>
+   <Resolution Name="Default">Considere tornar {0} não público ou uma constante.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182353.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remova locais não utilizados</Name>
+   <Description>Remova locais que não são usados ou que só são objetos de atribuição em implementações de método.</Description>
+   <Resolution Name="Default">{0} declara uma variável, {1}, do tipo {2}, que nunca é usada ou só é objeto de atribuição. Use essa variável ou remova-a.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
   <Rule TypeName="Revisar as consultas SQL em busca de vulnerabilidades de segurança" Category="Microsoft.Security" CheckId="CA2100">
    <Name>Revisar as consultas SQL em busca de vulnerabilidades de segurança</Name>
    <Description>Uma cadeia de caracteres de comando SQL compilada de uma entrada do usuário é vulnerável a ataques de injeção SQL. O Microsoft SQL Server e outros servidores de banco de dados oferecem suporte a procedimentos armazenados e consultas SQL parametrizadas, o que reduz o risco de ataques de injeção.</Description>
@@ -46,7 +1327,57 @@
    <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
    <Email />
    <MessageLevel Certainty="75">Warning</MessageLevel>
-   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306">
+   <Name>Definir localidade para tipos de dados</Name>
+   <Description>Na maioria dos casos, Locale deve ser explicitamente definido para CultureInfo.InvariantCulture em instâncias DataSet e DataTable. Na criação de uma instância DataSet ou DataTable, Locale é definido para a cultura atual. Na maioria dos casos, Locale deve ser definido para CultureInfo.InvariantCulture para garantir o comportamento de classificação adequado em todas as culturas.</Description>
+   <Resolution Name="Default">Defina a propriedade {0} Locale sempre que {1} criar uma instância desse tipo.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182188.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Especificar IFormatProvider</Name>
+   <Description>Se existir uma sobrecarga que use um argumento IFormatProvider, ele deverá sempre ser chamado a favor de uma sobrecarga que não o chama. Alguns métodos do tempo de execução convertem um valor em ou de uma representação de cadeia de caracteres e usa um parâmetro string que contenha um ou mais caracteres, chamados de especificadores de formato, que indicam como o valor deve ser convertido. Se o significado do especificador de formato variar de acordo com a cultura, um objeto de formatação fornecerá os caracteres reais usados na representação da cadeia de caracteres. Em cenários em que o comportamento de classificação e comparação nunca deve mudar entre culturas, especifique CultureInfo.InvariantCulture; caso contrário, especifique CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Como o comportamento de {0} pode variar de acordo com as configurações de localidade atuais do usuário, substitua esta chamada em {1} por uma chamada para {2}. Se o resultado de {2} for exibido ao usuário, especifique {3} como o parâmetro "IFormatProvider". Caso contrário, se o resultado for armazenado e acessado pelo software, como quando persiste em disco ou em um banco de dados, especifique {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
+   <Name>Tipos de espaços reservados estáticos não devem ter construtores</Name>
+   <Description>As instâncias de tipos que definem somente membros estáticos não precisam ser criadas. Muitos compiladores adicionarão automaticamente um construtor padrão público se nenhum construtor for especificado. Para evitar isso, adicionar um construtor privado vazio pode ser necessário.</Description>
+   <Resolution Name="Default">Como o tipo {0} contém somente membros "estáticos" ("Shared" no Visual Basic), adicione um construtor privado padrão para impedir que o compilador adicione um construtor público padrão.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182169.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+   <Name>Teste se há cadeias de caracteres vazias usando tamanho da cadeia</Name>
+   <Description>Para testar se há cadeias de caracteres vazias, verifique se String.Length é igual a zero. Constructos como "".Equals(someString) e String.Empty.Equals(someString) são menos eficientes do que testar o tamanho da cadeia de caracteres. Substitua-os por verificações com someString.Length == 0.</Description>
+   <Resolution Name="IsNullOrEmpty">Substitua a chamada para {0} em {1} por uma chamada para 'String.IsNullOrEmpty'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182279.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validar argumentos de métodos públicos" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validar argumentos de métodos públicos</Name>
+   <Description>Todos os argumentos de referência passados para métodos externamente visíveis devem ser verificados em relação a nulo (Nada em VB). Se apropriado, lance System.ArgumentNullException quando o argumento for nulo.</Description>
+   <Resolution Name="Default">No método externamente visível {0}, valide o parâmetro "{1}" antes de usá-lo.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
   </Rule>
  </Rules>
  <Localized>

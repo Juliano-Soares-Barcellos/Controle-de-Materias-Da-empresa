@@ -9,26 +9,19 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
     {
         public void PreencherCombo(string setores, string empresa, ComboBox Cmap, List<string> Maximidia)
         {
-
             if (Maximidia.Count > 0)
             {
                 Cmap.Items.Clear();
-
                 foreach (var item in Maximidia)
                 {
                     Cmap.Items.Add(item.ToString());
                 }
             }
-
         }
-
-        
-
         public DataTable QuantiSistemas(DataTable data)
         {
             int linhas = 0;
             DataTable dinamico = new DataTable();
-            
             dinamico.Columns.Add("Sistemas", typeof(string));
             dinamico.Columns.Add("Quantidade", typeof(int));
 
@@ -45,15 +38,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     }
                     else
                     {
-
                         DataRow newRow = dinamico.NewRow();
                         newRow["Sistemas"] = sistema;
                         newRow["Quantidade"] = 1;
                         dinamico.Rows.Add(newRow);
-
                     }
-                    linhas +=1;
-                    
+                    linhas += 1;
                 }
 
                 if (data.Rows.Count == linhas)
@@ -64,10 +54,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     dinamico.Rows.Add(newRow);
                 }
             }
-
             return dinamico;
         }
-
-
     }
 }

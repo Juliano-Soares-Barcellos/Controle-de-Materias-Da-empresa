@@ -15,19 +15,12 @@ namespace ImobilizadosDll.TabelasDao
         public static DataTable TabelaInicial()
         {
             Select consulta = new Select();
-
             DataTable tabela = new DataTable();
-
             List<ComputadorModel> computador = new List<ComputadorModel>();
-
             List<ImobilizadosModel> imobilizados = new List<ImobilizadosModel>();
-
             computador = consulta.TodosDadosDoComputador("select * from computador inner join pa on pa.id_pa=computador.fk_computador_Pa inner join grupos_pa on grupos_pa.id_grupo=pa.fk_grupo_id order by patrimonio;");
-
             imobilizados = consulta.TodosDadosDosImobilizados();
-
             MontaColunasElinhas montaTabela = new MontaColunasElinhas();
-
             tabela = montaTabela.MinhasColunas();
 
             foreach (var item in computador)
@@ -39,7 +32,6 @@ namespace ImobilizadosDll.TabelasDao
             {
                 tabela.Rows.Add(montaTabela.MinhasLinhasImobilizado(item, tabela));
             }
-
             return tabela;
         }
 
@@ -50,7 +42,6 @@ namespace ImobilizadosDll.TabelasDao
             Select select = new Select();
             MontaColunasElinhas linha = new MontaColunasElinhas();
             DataTable tabela = new DataTable();
-
             string consultaDb = "";
             string empresaNum = empresa == "Maximidia" ? "1" : "2";
 
@@ -59,22 +50,15 @@ namespace ImobilizadosDll.TabelasDao
             if (coluna.Equals("todos"))
             {
                 consultaDb = linha.VerificaGruposImob(coluna, "imob");
-
                 imob = select.RetornaTodosImob(empresaNum, consultaDb);
-
                 consultaDb = linha.VerificaGruposImob(coluna, "pc");
-
                 pc = select.RetornaImobFiltroEmpresaPc(empresa,consultaDb);
-
             }
             else
             {
                 consultaDb = linha.VerificaGruposImob(coluna, "imob");
-
                 imob = select.RetornaGruposImob(empresaNum, filtro, consultaDb);
-
                 consultaDb = linha.VerificaGruposImob(coluna, "pc");
-
                 pc = select.RetornaGruposPc(empresa, filtro, consultaDb);
             }
 
@@ -146,7 +130,6 @@ namespace ImobilizadosDll.TabelasDao
                 }
                 else
                 {
-            
                     RetornoPcs = new List<object> { retornaDadosDoPcAtual.Patrimonio, pa, PA[0].Id_pa.ToString() };
                 }
                 return RetornoPcs;
@@ -186,10 +169,6 @@ namespace ImobilizadosDll.TabelasDao
                 RetornoCombo.Add(item.Fk_compComputador_Pa.Fk_gurupoModel.Grupos.ToString().ToLower().Trim());
             }
             return RetornoCombo;
-
-
-
-            
         }
     }
 }

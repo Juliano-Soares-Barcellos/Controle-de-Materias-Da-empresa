@@ -14,8 +14,6 @@ namespace ImobilizadosDll.TabelasDao
     public class MontaColunasElinhas
     {
         CultureInfo cultura = new CultureInfo("pt-BR");
-       
-
         public DataTable MinhasColunas()
         {
             DataTable data = new DataTable();
@@ -34,15 +32,12 @@ namespace ImobilizadosDll.TabelasDao
 
             return data;
         }
-
         public DataRow MinhasLinhasPC(ComputadorModel computador, DataTable tabela)
         {
             DataRow row = null;
-
             if (computador != null)
             {
                 row = tabela.NewRow();
-
                 row["patrimonio"] = computador.Patrimonio;
                 row["item"] = "Computador " + computador.Tag_servico;
                 row["Estado da Conservação"] = computador.Conservacao;
@@ -62,11 +57,9 @@ namespace ImobilizadosDll.TabelasDao
         public DataRow MinhasLinhasImobilizado(ImobilizadosModel imob, DataTable tabela)
         {
             DataRow row = null;
-
             if (imob != null)
             {
                 row = tabela.NewRow();
-
                 row["patrimonio"] = imob.Patrimonio;
                 row["item"] = imob.Item;
                 row["Estado da Conservação"] = imob.Estado_de_Conservacao;
@@ -76,17 +69,13 @@ namespace ImobilizadosDll.TabelasDao
                 row["valor"] = valorFormatadoEmDinheiro(imob.Valor);
                 row["vida util"] = "5";
                 row["depreciacao"] = imob.Depreciacao;
-
-
                 if (imob.grupo == null)
                 {
                     row["local"] = "";
-
                 }
                 else
                 {
                     row["local"] = imob.grupo.Grupos;
-
                 }
                 row["Classificacao"] = imob.contabil.Classificacao;
                 row["empresa"] = imob.empresa.Empresa;
@@ -129,7 +118,6 @@ namespace ImobilizadosDll.TabelasDao
         }
         public ComputadorModel PegarDadosDoPcAntesDaTroca(string patrimonio, string empresa)
         {
-           
             try
             {
                 Query query = new Query();

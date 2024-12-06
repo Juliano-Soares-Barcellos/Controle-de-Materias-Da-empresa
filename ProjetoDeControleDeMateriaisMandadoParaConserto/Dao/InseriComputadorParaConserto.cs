@@ -1,10 +1,5 @@
-﻿using ProjetoDeControleDeMateriaisMandadoParaConserto.Model;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
@@ -20,8 +15,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
         private object valor = null;
         private string modelo = "";
         private string id_pa = "";
-
-        public InseriComputadorParaConserto(MaskedTextBox patrimonio, MaskedTextBox Descricao ,ComboBox Modelo, ComboBox Sistema)
+        public InseriComputadorParaConserto(MaskedTextBox patrimonio, MaskedTextBox Descricao, ComboBox Modelo, ComboBox Sistema)
         {
             this.Patrimonio = patrimonio;
             this.Descricao = Descricao;
@@ -29,7 +23,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             this.SistemaOperacional = Sistema;
             InserirParaConserto();
         }
-
         public void RetornarTudoSobrePc()
         {
             TodosDadosDoPc = computadoresMapeadosEconsertado.Dao.montarTabelasDao.retornaTudoSobrePc(Patrimonio.Text);
@@ -37,13 +30,14 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
         public void ValidacaoPraVerSeJaEstaEmProcesso()
         {
             ultima = TodosDadosDoPc.Rows.Count - 1;
-            if (
-                   TodosDadosDoPc.Rows[ultima][11].ToString() != "" && TodosDadosDoPc.Rows[ultima][13].ToString() == "")
-                    throw new Exception("Este computador ja esta em processo de conserto");
+
+            if (TodosDadosDoPc.Rows[ultima][11].ToString() != "" && TodosDadosDoPc.Rows[ultima][13].ToString() == "")
+                throw new Exception("Este computador ja esta em processo de conserto");
         }
         public void FazUpdateDoModelo()
         {
-            if (Modelo.SelectedIndex >= 0) {
+            if (Modelo.SelectedIndex >= 0)
+            {
                 modelo = Modelo.SelectedItem.ToString();
                 computadoresMapeadosEconsertado.Dao.UpdateDao.InseririModelo(valor.ToString(), modelo);
             }
@@ -55,7 +49,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             computadoresMapeadosEconsertado.Dao.InsersaoDao.InserirPaTabelaTemp(valor.ToString(), id_pa);
             computadoresMapeadosEconsertado.Dao.UpdateDao.updatePaTi(valor.ToString());
         }
-        public void InserirSistema ()
+        public void InserirSistema()
         {
             String Sistema = SistemaOperacional.SelectedIndex <= 0 ? "" : SistemaOperacional.SelectedItem.ToString();
             if (!Sistema.Equals(""))

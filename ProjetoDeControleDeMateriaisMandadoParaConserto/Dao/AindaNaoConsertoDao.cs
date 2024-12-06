@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -69,13 +68,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                         }
 
                         row.Add(dataAtual.ToString("yyyy-MM-dd"));
-                        
+
                         writer.WriteLine(String.Join(";", row));
                     }
 
                     MessageBox.Show("Dados salvos no arquivo CSV");
                     writer.Flush();
-                    
+
                 }
             }
             catch (Exception ex)

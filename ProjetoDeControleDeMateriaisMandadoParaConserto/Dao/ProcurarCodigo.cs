@@ -10,7 +10,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
     internal class ProcurarCodigo
     {
         public MySqlConnection con = null;
-        private  Query Query;
+        private Query Query;
         public List<Object[]> carregarTabela(string Numero)
         {
             List<Object[]> resultados = new List<Object[]>();

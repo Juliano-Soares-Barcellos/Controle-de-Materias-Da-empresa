@@ -74,6 +74,5 @@ namespace computadoresMapeadosEconsertado.Dao
             }
             return rowns;
         }
-
     }
 }

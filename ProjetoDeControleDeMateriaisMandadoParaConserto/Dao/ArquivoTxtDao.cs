@@ -41,7 +41,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 MessageBox.Show($"Ocorreu um erro: {ex.Message}");
             }
         }
-
     }
 }
 

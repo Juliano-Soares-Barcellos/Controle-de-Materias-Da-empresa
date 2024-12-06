@@ -58,8 +58,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.BackgroundImage = global::ProjetoDeControleDeMateriaisMandadoParaConserto.Properties.Resources.m___Cópia;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(175)))), ((int)(((byte)(207)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
@@ -88,12 +87,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(329, 40);
+            this.label1.Location = new System.Drawing.Point(347, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 33);
+            this.label1.Size = new System.Drawing.Size(395, 38);
             this.label1.TabIndex = 88;
             this.label1.Text = "CADASTRO DE MATERIAL";
             // 

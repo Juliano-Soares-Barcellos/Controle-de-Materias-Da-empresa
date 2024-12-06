@@ -1,13 +1,8 @@
 ﻿using ProjetoDeControleDeMateriaisMandadoParaConserto.Dao;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -18,8 +13,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         private DataTable tabela = new DataTable();
         private DataTable tabelaimob = new DataTable();
         MapeamentoPcsDao map = new MapeamentoPcsDao();
-        private List<String> Maximidia = new List<string> { "administrativo", "condenada", "coordenacao", "coordenacao", "operacao maximidia", "placar", "procurar", "supervisao", "todos", "Ti", "treinamento 2","todos" };
-        private List<String> ClubeMaxi = new List<string> { "administrativo", "condenada", "Diretoria", "operacao clube", "todos", "procurar", "supervisao clube","Ti" };
+        private List<String> Maximidia = new List<string> { "administrativo", "condenada", "coordenacao", "coordenacao", "operacao maximidia", "placar", "procurar", "supervisao", "todos", "Ti", "treinamento 2", "todos" };
+        private List<String> ClubeMaxi = new List<string> { "administrativo", "condenada", "Diretoria", "operacao clube", "todos", "procurar", "supervisao clube", "Ti" };
         public Imobilizados()
         {
             InitializeComponent();
@@ -28,7 +23,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             dataGridView.RowPrePaint += new DataGridViewRowPrePaintEventHandler(MudaCorComputador);
             dataGridViewImob.RowPrePaint += new DataGridViewRowPrePaintEventHandler(MudaCorImob);
         }
-       
         private void BtnPatrimonio_Click(object sender, EventArgs e)
         {
             if (ComboEmpresa.SelectedIndex < 0)
@@ -38,7 +32,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             else if (string.IsNullOrEmpty(textPatrimonioPc.Text.ToString()))
             {
                 MessageBox.Show("Por Favor digite o Patrimonio");
-
             }
             else
             {
@@ -48,9 +41,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 ComboEmpresa.SelectedIndex = -1;
                 setarLabel(tabela.Rows.Count, LabelString, LabelTotalComputador);
             }
-
         }
-
 
         private void carregaTabelaPC()
         {
@@ -63,21 +54,17 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             quantidadeDeSistemas.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
             setarLabel(tabela.Rows.Count, LabelString, LabelTotalComputador);
         }
-
         private void carregaImobilizados()
         {
-            tabelaimob =ImobilizadosDll.TabelasDao.Tabelas.TabelaInicial();
-            dataGridViewImob.DataSource=tabelaimob;
+            tabelaimob = ImobilizadosDll.TabelasDao.Tabelas.TabelaInicial();
+            dataGridViewImob.DataSource = tabelaimob;
             dataGridViewImob.DefaultCellStyle.Font = new Font("Arial", 8);
             dataGridViewImob.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
             dataGridViewImob.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-
         }
 
         private void MudaCorComputador(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-
             if (e.RowIndex % 2 == 0)
             {
                 dataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
@@ -89,10 +76,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
             this.dataGridView.GridColor = Color.BlueViolet;
         }
-
         private void MudaCorImob(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-
             if (e.RowIndex % 2 == 0)
             {
                 dataGridViewImob.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
@@ -104,7 +89,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
             this.dataGridView.GridColor = Color.BlueViolet;
         }
-
         private void BtnPa_Click(object sender, EventArgs e)
         {
             if (ComboEmpresa.SelectedIndex < 0)
@@ -114,7 +98,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             else if (string.IsNullOrEmpty(textPa.Text.ToString()))
             {
                 MessageBox.Show("Por Favor digite a Pa");
-
             }
             else
             {
@@ -123,10 +106,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 dataGridView.DataSource = tabela;
                 ComboEmpresa.SelectedIndex = -1;
                 setarLabel(tabela.Rows.Count, LabelString, LabelTotalComputador);
-
             }
         }
-
         private void BtnTag_Click(object sender, EventArgs e)
         {
             if (ComboEmpresa.SelectedIndex < 0)
@@ -136,7 +117,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             else if (string.IsNullOrEmpty(textTag.Text.ToString()))
             {
                 MessageBox.Show("Por Favor digite a Server Tag");
-
             }
             else
             {
@@ -150,15 +130,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
         private void BtnSetor_Click(object sender, EventArgs e)
         {
-
             if (ComboEmpresa.SelectedIndex < 0)
             {
                 MessageBox.Show("Por favor Escolha a empresa");
             }
-            else if (comboSetor.SelectedIndex < 0 )
+            else if (comboSetor.SelectedIndex < 0)
             {
                 MessageBox.Show("Por Favor escolha o setor");
-
             }
             else
             {
@@ -169,7 +147,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                     tabela = computadoresMapeadosEconsertado.Dao.montarTabelasDao.Patrimonio(empresa, comboboxSetor, "todosclube");
                     quantidadeDeSistemas.DataSource = map.QuantiSistemas(tabela);
                     setarLabel(tabela.Rows.Count, LabelString, LabelTotalComputador);
-
                 }
                 else
                 {
@@ -197,11 +174,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         private void ComboEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<string> combo = new List<string>();
-
-            string empresa = ComboEmpresa.SelectedIndex < 0? ComboEmpresa.SelectedText : ComboEmpresa.SelectedItem.ToString();
-            // map.PreencherCombo("setores", empresa, comboSetor, Maximidia, ClubeMaxi);
+            string empresa = ComboEmpresa.SelectedIndex < 0 ? ComboEmpresa.SelectedText : ComboEmpresa.SelectedItem.ToString();
             comboSetor1.SelectedIndex = -1;
-            
             comboSetor1.Items.Clear();
             map.PreencherCombo("setores", empresa, comboSetor, ImobilizadosDll.TabelasDao.Tabelas.RetornaComboBoxPc(empresa));
             combo = ImobilizadosDll.TabelasDao.Tabelas.RetornaComboBox(empresa);
@@ -213,7 +187,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         }
 
 
-        private void setarLabel(int row,  Label label1, Label label2)
+        private void setarLabel(int row, Label label1, Label label2)
         {
             if (row == 0)
             {
@@ -253,10 +227,10 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 MessageBox.Show("Selecione a Empresa");
             }
 
-            else if(textItem.Text.Equals(""))
+            else if (textItem.Text.Equals(""))
             {
-                
-                 MessageBox.Show("Por favor Digitar o nome do item");
+
+                MessageBox.Show("Por favor Digitar o nome do item");
             }
             else
             {
@@ -264,13 +238,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 tabelaimob = ImobilizadosDll.TabelasDao.Tabelas.gruposImobGruposPc(empresa, "item", textItem.Text);
                 dataGridViewImob.DataSource = tabelaimob;
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string empresa = ComboEmpresa.SelectedIndex < 0 ? ComboEmpresa.SelectedText : ComboEmpresa.SelectedItem.ToString();
-            string Combogrupos = comboSetor1.SelectedIndex < 0  ? comboSetor1.SelectedText : comboSetor1.SelectedItem.ToString();
+            string Combogrupos = comboSetor1.SelectedIndex < 0 ? comboSetor1.SelectedText : comboSetor1.SelectedItem.ToString();
 
             if (ComboEmpresa.SelectedIndex < 0)
             {
@@ -280,14 +254,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             {
                 MessageBox.Show("Selecione algum Setor ");
             }
-            else if(comboSetor1.SelectedItem.Equals("Todos"))
+            else if (comboSetor1.SelectedItem.Equals("Todos"))
             {
                 tabelaimob = ImobilizadosDll.TabelasDao.Tabelas.gruposImobGruposPc(empresa, "todos", Combogrupos);
                 dataGridViewImob.DataSource = tabelaimob;
             }
             else
             {
-
                 tabelaimob = ImobilizadosDll.TabelasDao.Tabelas.gruposImobGruposPc(empresa, "grupos", Combogrupos);
                 dataGridViewImob.DataSource = tabelaimob;
             }
@@ -337,26 +310,14 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             EspelhoPa espelho = new EspelhoPa();
             espelho.Show();
         }
-
-        private void Imobilizados_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox3.Checked)
             {
                 checkBox3.Checked = false;
-                 carregaTabelaPC();
+                carregaTabelaPC();
             }
         }
-
-        private void Digi_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnMemoria_Click(object sender, EventArgs e)
         {
             if (ComboEmpresa.SelectedIndex < 0)
@@ -375,14 +336,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 quantidadeDeSistemas.DataSource = map.QuantiSistemas(tabela);
                 dataGridView.DataSource = tabela;
                 ComboEmpresa.SelectedIndex = -1;
-                
                 setarLabel(tabela.Rows.Count, LabelString, LabelTotalComputador);
             }
-
-
-
         }
-
         private void BtnProcessador_Click(object sender, EventArgs e)
         {
             if (ComboEmpresa.SelectedIndex < 0)
@@ -392,7 +348,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             else if (string.IsNullOrEmpty(TextoProcessador.Text.ToString()))
             {
                 MessageBox.Show("Por Favor digite o processador");
-
             }
             else
             {
@@ -403,7 +358,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 ComboEmpresa.SelectedIndex = -1;
                 setarLabel(tabela.Rows.Count, LabelString, LabelTotalComputador);
             }
-
         }
     }
 }

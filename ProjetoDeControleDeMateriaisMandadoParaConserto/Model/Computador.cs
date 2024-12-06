@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Model
 {
     public class Computador
     {
+        public int Id { get; set; }
 
-        public int Id{ get; set; }
-
-        public String Nome{ get; set; }
+        public String Nome { get; set; }
 
         public String Descricao { get; set; }
 
@@ -23,8 +18,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Model
 
         public String Programas { get; set; }
 
-
-        public Computador(int id,String Nome,String Marca,String Sistema,String prog)
+        public Computador(int id, String Nome, String Marca, String Sistema, String prog)
         {
             this.Id = id;
             this.Nome = Nome;

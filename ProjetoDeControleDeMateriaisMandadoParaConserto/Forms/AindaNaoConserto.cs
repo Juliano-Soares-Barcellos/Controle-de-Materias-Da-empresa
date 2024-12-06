@@ -1,8 +1,6 @@
 ﻿using ProjetoDeControleDeMateriaisMandadoParaConserto.Dao;
-using ProjetoDeControleDeMateriaisMandadoParaConserto.Querys;
 using ProjetoDeControleDeMateriaisMandadoParaConserto.Model;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -21,10 +19,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             InitializeComponent();
             Dados = new List<Object[]>();
         }
-
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             AindaNaoConsertoDao aindaNaoConsertoDa = new AindaNaoConsertoDao();
@@ -68,12 +62,10 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                         produto.Nome = NomeMaterial;
                         produto.Numero = numero;
                         produto.quantidade_conserto = 0;
-
                         Object[] Produtos = new object[] { produto.id, produto.Nome, produto.Numero, produto.quantidade_conserto, "00" };
                         Dados.Add(Produtos);
                         CarregarDadosNaTabela();
                         MessageBox.Show("Produto não encontrado no nosso Banco de dados !");
-
                     }
                 }
                 else if (result == DialogResult.No)
@@ -92,7 +84,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 int headset = 0;
                 int carrapato = 0;
                 int discador = 0;
-
                 foreach (DataGridViewRow row in Tabela.Rows)
                 {
                     if (row.Cells[3].Value != null)
@@ -119,27 +110,20 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                         }
                     }
                 }
-
                 arquivo.GeararArquivoTxt(LabelHeadset.Text, LabelDiscador.Text, LabelCarrapato.Text, headset, discador, carrapato);
-
-                
             }
         }
 
         private void CarregarDadosNaTabela()
         {
-
             SelectTabela selectTabela = new SelectTabela();
             tabelaPivotada = selectTabela.PivotData(Dados);
             Tabela.DataSource = tabelaPivotada;
             LabelsMostrar(Dados);
-
-
         }
         public void LabelsMostrar(List<Object[]> Dados)
         {
             SelectTabela SelectTabel = new SelectTabela();
-
             List<int> Produtos = SelectTabel.HEADSETDISCADORConserto(Dados);
             int Headset = Produtos[0];
             int Discador = Produtos[1];
@@ -150,11 +134,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             labelD.Visible = true;
             LabelCarra.Visible = true;
             labelh.Visible = true;
-
             LabelHeadset.Text = Headset.ToString();
             LabelDiscador.Text = Discador.ToString();
             LabelCarrapato.Text = Carrapatos.ToString();
-
         }
 
         private void Tabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -162,9 +144,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             if (e.RowIndex >= 0) // Verifica se uma linha foi selecionada
             {
                 DataGridViewRow selectedRow = Tabela.Rows[e.RowIndex]; // Obtém a linha selecionada
-
                 string coluna1 = selectedRow.Cells[1].Value.ToString();
-
                 DialogResult result = MessageBox.Show("Deseja excluir os dados da linha selecionada?", "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
@@ -175,7 +155,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                         {
                             Dados.Remove(rowData);
                             Tabela.Rows.Remove(selectedRow);
-
                             MessageBox.Show("Dados excluídos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break; // Interrompe o loop após a exclusão
                         }
@@ -186,7 +165,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
             if (checkBox1.Checked)
             {
                 checkBox1.Checked = false;
@@ -194,7 +172,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 aindaNaoConsertoDa.GravarCsv(Dados);
             }
         }
-
 
         private void AindaNaoConserto_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -207,7 +184,5 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                 f.Close();
             }
         }
-
-     
     }
 }

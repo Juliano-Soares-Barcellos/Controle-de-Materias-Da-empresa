@@ -3,9 +3,6 @@ using ProjetoDeControleDeMateriaisMandadoParaConserto.BancoConexao;
 using ProjetoDeControleDeMateriaisMandadoParaConserto.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
@@ -13,7 +10,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
     class InsersaoDbPlanilha
     {
         MySqlConnection con = null;
-
         public void inserirProduto(Produto Produto, Conserto conserto = null)
         {
             try
@@ -22,39 +18,34 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 con = new Banco().Conexao();
                 con.Open();
 
-                if(conserto==null)
+                if (conserto == null)
                 {
-                     sql = "INSERT INTO Produto(Nome, Numero, quantidade_conserto) VALUES (@Nome, @Numero, 0 ); SELECT LAST_INSERT_ID()";
+                    sql = "INSERT INTO Produto(Nome, Numero, quantidade_conserto) VALUES (@Nome, @Numero, 0 ); SELECT LAST_INSERT_ID()";
                 }
                 else
                 {
-                     sql = "INSERT INTO Produto(Nome, Numero, quantidade_conserto) VALUES (@Nome, @Numero, @Quantidade+1); SELECT LAST_INSERT_ID()";
+                    sql = "INSERT INTO Produto(Nome, Numero, quantidade_conserto) VALUES (@Nome, @Numero, @Quantidade+1); SELECT LAST_INSERT_ID()";
 
                 }
                 MySqlCommand incluir = null;
                 MySqlCommand comando = new MySqlCommand(sql, con);
-               
                 comando.Parameters.AddWithValue("@Nome", Produto.Nome);
                 comando.Parameters.AddWithValue("@Numero", Produto.Numero);
                 comando.Parameters.AddWithValue("@Quantidade", Produto.quantidade_conserto);
-
                 int ProdutoId = Convert.ToInt32(comando.ExecuteScalar());
-              
 
                 if (conserto != null)
                 {
                     conserto.Produto_id.id = ProdutoId;
                     String sql2 = "INSERT INTO Conserto(Data, Produto_id) VALUES (@Data, @Produto_id)";
-                    incluir= new MySqlCommand(sql2, con);
+                    incluir = new MySqlCommand(sql2, con);
                     incluir.Parameters.AddWithValue("@Data", conserto.Data);
                     incluir.Parameters.AddWithValue("@Produto_id", conserto.Produto_id.id);
                     incluir.ExecuteNonQuery();
                 }
-                
             }
             catch (MySqlException ex)
             {
-
                 MessageBox.Show("Erro ao executar o comando SQL: " + ex.Message);
                 Console.WriteLine(ex.Message);
             }
@@ -65,7 +56,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
         }
 
 
-        public void InsereBancoArquivo(List<Object[]> s,Boolean backup)
+        public void InsereBancoArquivo(List<Object[]> s, Boolean backup)
         {
             try
             {
@@ -73,10 +64,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 {
                     con = new Banco().Conexao();
                     con.Open();
-
                     string sqlProduto = "INSERT INTO Produto(Nome, Numero, quantidade_conserto) VALUES (@Nome, @Numero, @Quantidade)";
                     string sqlConserto = "INSERT INTO Conserto(Data, Produto_id) VALUES (@Data, @Produto_id)";
-
                     MySqlCommand comandoProduto = new MySqlCommand(sqlProduto, con);
                     MySqlCommand comandoConserto = new MySqlCommand(sqlConserto, con);
 
@@ -114,22 +103,22 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                             }
                             else
                             {
-                                comandoProduto.Parameters.AddWithValue("@Quantidade", quantidadeConserto+1);
+                                comandoProduto.Parameters.AddWithValue("@Quantidade", quantidadeConserto + 1);
                             }
                             comandoProduto.ExecuteNonQuery();
 
                             // Verifica se há datas presentes no array de valores
                             for (int i = 3; i < valores.Length; i++)
                             {
-                                    if (DateTime.TryParse(valores[i].ToString(), out DateTime dataConserto) && !valores[i].Equals(""))
-                                    {
-                                        int produtoId = Convert.ToInt32(comandoProduto.LastInsertedId);
-                                        comandoConserto.Parameters.Clear(); // Limpar parâmetros antes de cada inserção
-                                        comandoConserto.Parameters.AddWithValue("@Data", dataConserto); // Você precisa definir a data corretamente aqui
-                                        comandoConserto.Parameters.AddWithValue("@Produto_id", produtoId);
+                                if (DateTime.TryParse(valores[i].ToString(), out DateTime dataConserto) && !valores[i].Equals(""))
+                                {
+                                    int produtoId = Convert.ToInt32(comandoProduto.LastInsertedId);
+                                    comandoConserto.Parameters.Clear(); // Limpar parâmetros antes de cada inserção
+                                    comandoConserto.Parameters.AddWithValue("@Data", dataConserto); // Você precisa definir a data corretamente aqui
+                                    comandoConserto.Parameters.AddWithValue("@Produto_id", produtoId);
 
-                                        comandoConserto.ExecuteNonQuery();
-                                    }
+                                    comandoConserto.ExecuteNonQuery();
+                                }
 
                                 else if (backup == false)
                                 {

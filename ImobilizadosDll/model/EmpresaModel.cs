@@ -9,7 +9,6 @@ namespace ImobilizadosDll.model
     public class EmpresaModel
     {
        public int id_empresas { get; set; }
-
        public string Empresa{ get; set; }
     }
 }

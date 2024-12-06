@@ -34,7 +34,6 @@
             this.computadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telaDeCadastramentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarComputadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patrimonioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imobilizadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fonesEHeadsetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procurarFoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +77,6 @@
             this.computadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.telaDeCadastramentoToolStripMenuItem,
             this.cadastrarComputadorToolStripMenuItem,
-            this.patrimonioToolStripMenuItem,
             this.imobilizadosToolStripMenuItem});
             this.computadorToolStripMenuItem.Name = "computadorToolStripMenuItem";
             this.computadorToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
@@ -97,13 +95,6 @@
             this.cadastrarComputadorToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.cadastrarComputadorToolStripMenuItem.Text = "Cadastrar Computador";
             this.cadastrarComputadorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarComputadorToolStripMenuItem_Click);
-            // 
-            // patrimonioToolStripMenuItem
-            // 
-            this.patrimonioToolStripMenuItem.Name = "patrimonioToolStripMenuItem";
-            this.patrimonioToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.patrimonioToolStripMenuItem.Text = "Patrimonio";
-            this.patrimonioToolStripMenuItem.Click += new System.EventHandler(this.patrimonioToolStripMenuItem_Click);
             // 
             // imobilizadosToolStripMenuItem
             // 
@@ -181,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 561);
+            this.ClientSize = new System.Drawing.Size(735, 560);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -211,7 +202,6 @@
         private System.Windows.Forms.ToolStripMenuItem inserirArquivoCsvToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem criarArquivoAntesConsertoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirFoneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patrimonioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imobilizadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarComputadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem telaDeCadastramentoToolStripMenuItem;

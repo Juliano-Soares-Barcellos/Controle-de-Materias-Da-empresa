@@ -13,12 +13,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             InitializeComponent();
             textBox1.KeyPress += textBox1_KeyPress;
         }
-
-
-
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-     {
+        {
             // Verifica se a tecla pressionada não é um dígito numérico ou a tecla de backspace
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
@@ -35,12 +31,10 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             }
             else
             {
-
                 NumeroDao numeroDao = new NumeroDao();
                 InsersaoDbPlanilha t = new InsersaoDbPlanilha();
                 string numero = textBox1.Text;
                 Object[] encontrar = numeroDao.EncontrarNumero(numero);
-
                 if (encontrar.Length > 0)
                 {
                     MessageBox.Show("Produto encontrado com sucesso!!!");
@@ -54,7 +48,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                     MessageBox.Show("Produto nao encontrado");
                 }
                 textBox1.Text = "";
-
             }
         }
 
@@ -62,16 +55,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
         {
             SelectTabela selectTabela = new SelectTabela();
             ProcurarCodigo ProcurarCodigo = new ProcurarCodigo();
-            // Carrega os dados do banco de dados e cria a tabela pivotada
             List<Object[]> dados = ProcurarCodigo.carregarTabela(numero);
             DataTable tabelaPivotada = selectTabela.PivotData(dados);
-
-            // Exibe a tabela pivotada no DataGridView
             Tabela.DataSource = tabelaPivotada;
         }
 
         public event EventHandler ProdutoExcluido;
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (TextDeletar.Text == "")
@@ -82,14 +71,10 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             {
                 DeleteDao d = new DeleteDao();
                 d.deletarProduto(TextDeletar.Text);
-
                 // Dispara o evento ProdutoExcluido
                 ProdutoExcluido?.Invoke(this, EventArgs.Empty);
-
                 CarregarDadosNaTabela(TextDeletar.Text);
             }
         }
-
-       
     }
 }

@@ -38,7 +38,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             {
                 string message = "Deseja prosseguir? Digite 's' para sim ou 'n' para não:";
                 string caption = "Confirmação";
-               
+
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
 
                 DialogResult result = MessageBox.Show(message, caption, buttons);
@@ -49,7 +49,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
                     NumeroDao numeroDao = new NumeroDao();
                     InsersaoDbPlanilha t = new InsersaoDbPlanilha();
                     string numero = textBox1.Text;
-                    string NomeMaterial="";
+                    string NomeMaterial = "";
 
                     if (comboBox.SelectedIndex == -1)
                     {

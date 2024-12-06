@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
@@ -12,13 +7,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
     public class ListarConsertoTelaCadastramento
     {
         private DataTable retornaTudoConserto;
-        public  DataGridView Tabela;
+        public DataGridView Tabela;
         private MaskedTextBox textBox1;
         private ComboBox comboBox;
         private CheckBox checkBox3;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
-
         public ListarConsertoTelaCadastramento(DataGridView tabela, MaskedTextBox textBox1, ComboBox comboBox, CheckBox checkBox3, CheckBox checkBox1, CheckBox checkBox2)
         {
             this.Tabela = tabela;
@@ -44,18 +38,15 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             }
             else
             {
-                Tabela.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(221,221,221);
+                Tabela.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(221, 221, 221);
             }
             this.Tabela.GridColor = Color.BlueViolet;
         }
         public void Apagar()
         {
-            if (retornaTudoConserto.Rows.Count > 0) retornaTudoConserto.Reset();
-
-            if (retornaTudoConserto.Rows.Count > 0) retornaTudoConserto.Reset();
-
+            if (retornaTudoConserto.Rows.Count > 0)
+                retornaTudoConserto.Reset();
         }
-
         public void procurarPatrimonio()
         {
             Apagar();
@@ -101,7 +92,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             this.Apagar();
             TabelaDao t = new TabelaDao();
             retornaTudoConserto = computadoresMapeadosEconsertado.Dao.montarTabelasDao.Ssd();
-
             Tabela.DataSource = retornaTudoConserto;
             Tabela.RowPrePaint += new DataGridViewRowPrePaintEventHandler(MudaCor);
             checkBox2.Checked = false;
@@ -114,6 +104,5 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             Tabela.RowPrePaint += new DataGridViewRowPrePaintEventHandler(MudaCor);
             checkBox3.Checked = false;
         }
-       
     }
 }

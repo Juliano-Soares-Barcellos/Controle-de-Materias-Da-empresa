@@ -28,13 +28,10 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Data-Saida", typeof(DateTime));
                 tabela.Columns.Add("o que foi feito", typeof(string));
 
-
-
                 foreach (var consertado in TodosConsertados)
                 {
                     var computadorTabela = consertado.Computador;
                     var ConsertosTabela = consertado.Conserto;
-
                     foreach (var item in ConsertosTabela)
                     {
                         System.Data.DataRow linha = tabela.NewRow();
@@ -46,7 +43,6 @@ namespace computadoresMapeadosEconsertado.Dao
                         linha["Data-Saida"] = item.data_conserto_finalizado;
                         linha["o que foi feito"] = item.descricao_problema_resolvido;
                         tabela.Rows.Add(linha);
-
                     }
                 }
             }
@@ -69,7 +65,6 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Modelo", typeof(string));
                 tabela.Columns.Add("sistema opercaional", typeof(string));
                 tabela.Columns.Add("Programas instalados", typeof(string));
-
 
                 foreach (var item in Pas)
                 {
@@ -108,8 +103,6 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Data-Saida", typeof(DateTime));
                 tabela.Columns.Add("o que foi feito", typeof(string));
 
-
-
                 foreach (var consertado in TodosConsertados)
                 {
                     var computadorTabela = consertado.Computador;
@@ -133,9 +126,7 @@ namespace computadoresMapeadosEconsertado.Dao
             {
                 Console.WriteLine(e.Message);
             }
-
             return tabela;
-
         }
 
         public static DataTable retornaTudoSobrePc(String patrimonio)
@@ -162,35 +153,33 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("descricao resolução", typeof(string));
                 tabela.Columns.Add("data_saida", typeof(DateTime));
 
-
-
                 foreach (var consertado in TodosConsertados)
                 {
                     var computadorTabela = consertado.Computador;
                     var ConsertosTabela = consertado.Conserto;
                     System.Data.DataRow linha = tabela.NewRow();
                   
-                            linha["id computador"] = computadorTabela.id_computador;
-                            linha["patrimonio"] = computadorTabela.patrimonio;
-                            linha["marca"] = computadorTabela.marca;
-                            linha["programa"] = computadorTabela.programa;
-                            linha["Sistema"] = computadorTabela.sistemasOperacionais;
-                            linha["fk_Pa"] = computadorTabela.fk_compComputador_Pa.id_pa;
-                            linha["Pa"] = computadorTabela.fk_compComputador_Pa.pa;
-                            linha["fk_grupo"] = computadorTabela.fk_compComputador_Pa.Fk_gurupoModel.id_grupo;
-                            linha["grupo"] = computadorTabela.fk_compComputador_Pa.Fk_gurupoModel.grupos;
+                    linha["id computador"] = computadorTabela.id_computador;
+                    linha["patrimonio"] = computadorTabela.patrimonio;
+                    linha["marca"] = computadorTabela.marca;
+                    linha["programa"] = computadorTabela.programa;
+                    linha["Sistema"] = computadorTabela.sistemasOperacionais;
+                    linha["fk_Pa"] = computadorTabela.fk_compComputador_Pa.id_pa;
+                    linha["Pa"] = computadorTabela.fk_compComputador_Pa.pa;
+                    linha["fk_grupo"] = computadorTabela.fk_compComputador_Pa.Fk_gurupoModel.id_grupo;
+                    linha["grupo"] = computadorTabela.fk_compComputador_Pa.Fk_gurupoModel.grupos;
 
                     if (ConsertosTabela != null)
                     {
-                                foreach (var item in ConsertosTabela)
-                                {
-                                    linha["id_conserto"] = item.id_conserto;
-                                    linha["data_entrada"] = item.data_entrada;
-                                    linha["Descricao Problema"] = item.Descricao_problema;
-                                    linha["fk_computador"] = item.fkComputador.id_computador;
-                                    linha["descricao resolução"] = item.descricao_problema_resolvido;
-                                    linha["data_saida"] = item.data_conserto_finalizado;
-                                }
+                        foreach (var item in ConsertosTabela)
+                        {
+                            linha["id_conserto"] = item.id_conserto;
+                            linha["data_entrada"] = item.data_entrada;
+                            linha["Descricao Problema"] = item.Descricao_problema;
+                            linha["fk_computador"] = item.fkComputador.id_computador;
+                            linha["descricao resolução"] = item.descricao_problema_resolvido;
+                            linha["data_saida"] = item.data_conserto_finalizado;
+                        }
                     }
 
                     tabela.Rows.Add(linha);
@@ -219,8 +208,6 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Grupo", typeof(string));
                 tabela.Columns.Add("Data-Saida", typeof(string));
                 tabela.Columns.Add("o que foi feito", typeof(string));
-
-
 
                 foreach (var consertado in TodosConsertados)
                 {
@@ -285,8 +272,6 @@ namespace computadoresMapeadosEconsertado.Dao
                 tabela.Columns.Add("Data-Saida", typeof(string));
                 tabela.Columns.Add("o que foi feito", typeof(string));
 
-
-
                 foreach (var consertado in TodosConsertados)
                 {
                     var computadorTabela = consertado.Computador;
@@ -303,7 +288,6 @@ namespace computadoresMapeadosEconsertado.Dao
                         linha["Data-Saida"] = item.data_conserto_finalizado;
                         linha["o que foi feito"] = item.descricao_problema_resolvido;
                         tabela.Rows.Add(linha);
-
                     }
                 }
             }
@@ -330,7 +314,6 @@ namespace computadoresMapeadosEconsertado.Dao
             else
             {
                  query = "select * from computador inner join pa on pa.id_pa=computador.fk_computador_Pa inner join grupos_pa on grupos_pa.id_grupo=pa.fk_grupo_id ;";
-                //query = "select * from computador_teste inner join pa_teste on pa_teste.id_pa=computador_teste.fk_computador_Pa inner join grupos_pa_teste on grupos_pa_teste.id_grupo=pa_teste.fk_grupo_id ;";
                 patrimonios = computradorDAO.FiltroMapInitFiltroMapInit(query);
             }
             DataTable tabela = new DataTable();
@@ -358,10 +341,8 @@ namespace computadoresMapeadosEconsertado.Dao
 
                     Double depreciacao= computradorDAO.depreciacao(item.DataCompra, item.valor);
                     String ValorDepreciadoEmFormaDinheiro = depreciacao.ToString("C",cultura);
-                     DataRow linha = tabela.NewRow();
                     string dataSemHoras = item.DataCompra.ToString("dd/MM/yyyy");
-
-
+                    DataRow linha = tabela.NewRow();
                     linha["Nome da Maquina"] = item.NomeDaMaquina;
                     linha["Tag de Serviço"] = item.tag_servico;
                     linha["Patrimonio"] = item.patrimonio;
@@ -384,7 +365,6 @@ namespace computadoresMapeadosEconsertado.Dao
             {
                 Console.WriteLine(e.Message);
             }
-
             return tabela;
         }
         public static DataTable PasOperacao()
@@ -393,7 +373,6 @@ namespace computadoresMapeadosEconsertado.Dao
             computadorDao computradorDAO = new computadorDao();
             Query query = new Query();
             patrimonios = computradorDAO.FiltroMapInitFiltroMapInit(query.MapeamentoDePcs);
-
             DataTable tabela = new DataTable();
 
             try
@@ -406,12 +385,10 @@ namespace computadoresMapeadosEconsertado.Dao
                 foreach (var item in patrimonios)
                 {
                     DataRow linha = tabela.NewRow();
-
                     linha["Patrimonio"] = item.patrimonio==0 ? "" : item.patrimonio.ToString();
                     linha["Pa"] = item.fk_compComputador_Pa.pa;
                     linha["Id da Pa"] = item.fk_compComputador_Pa.talk_id;
                     linha["Programas"] = item.programa;
-                    
                     tabela.Rows.Add(linha);
                 }
             }
@@ -419,12 +396,7 @@ namespace computadoresMapeadosEconsertado.Dao
             {
                 Console.WriteLine(e.Message);
             }
-
             return tabela;
         }
-
-
-
     }
-
 }

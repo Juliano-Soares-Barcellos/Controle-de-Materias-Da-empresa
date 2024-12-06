@@ -11,7 +11,6 @@ namespace computadoresMapeadosEconsertado.Dao
 {
     public class UpdateDao
     {
-
         public static void AtualizarComputador(String idComputador, string novoSistema)
         {
             Query query = new Query();

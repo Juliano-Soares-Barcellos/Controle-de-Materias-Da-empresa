@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="consultas\Query.cs" />
     <Compile Include="Dao\computadorDao.cs" />
     <Compile Include="Dao\delete.cs" />

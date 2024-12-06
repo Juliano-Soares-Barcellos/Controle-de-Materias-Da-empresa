@@ -783,7 +783,6 @@
             this.Digi.Size = new System.Drawing.Size(145, 19);
             this.Digi.TabIndex = 2;
             this.Digi.Text = "Digite a Memoria :";
-            this.Digi.Click += new System.EventHandler(this.Digi_Click);
             // 
             // TextoMemoria
             // 
@@ -1139,7 +1138,6 @@
             this.MinimumSize = new System.Drawing.Size(1142, 199);
             this.Name = "Imobilizados";
             this.Text = "Imobilizados";
-            this.Load += new System.EventHandler(this.Imobilizados_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);

@@ -1,10 +1,6 @@
 ﻿using ProjetoDeControleDeMateriaisMandadoParaConserto.Model;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
@@ -25,9 +21,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
         private String id_conserto = "";
         private String tabelaTemp_id = "";
         private String tabelaTemp_id_pa = "";
-
-
-
         public RetiraDoConserto(MaskedTextBox Patrimonio, MaskedTextBox Descricao, ComboBox Sistema, CheckedListBox CheckBox)
         {
             this.Tnome = Patrimonio;
@@ -36,7 +29,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             this.CheckBox = CheckBox;
             RetiraConserto();
         }
-
         public void AgrupaCheckList()
         {
             if (CheckBox.CheckedItems != null)

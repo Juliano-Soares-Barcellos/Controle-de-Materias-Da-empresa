@@ -10,11 +10,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
     internal class SelectFiltro
     {
         private MySqlConnection con = null;
-
         public List<Object[]> carregarTabela(int Mes, int Ano, string sql)
         {
             List<Object[]> resultados = new List<Object[]>();
-
             try
             {
                 con = new Banco().Conexao();
@@ -27,17 +25,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 while (reader.Read())
                 {
                     Object[] row = new Object[reader.FieldCount];
-
                     for (int i = 0; i < reader.FieldCount; i++)
                     {
                         row[i] = reader[i];
                     }
-
                     resultados.Add(row);
                 }
-
                 reader.Close();
-
             }
             catch (MySqlException ex)
             {
@@ -47,7 +41,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 con.Close();
             }
-
             return resultados;
         }
 
@@ -62,7 +55,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 pivotTable.Columns.Add("Data Conserto", typeof(DateTime));
                 pivotTable.Columns.Add("Garantia", typeof(string));
                 pivotTable.Columns.Add("Dias de Garantia", typeof(string));
-
                 // Pivotar os dados e preencher as colunas de datas de conserto
                 foreach (Object[] row in dados)
                 {
@@ -71,14 +63,11 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     string numero = row[2].ToString();
                     int quantidadeConserto = (int)row[3];
                     DateTime Data = (DateTime)row[5];
-
                     DataRow newRow = pivotTable.NewRow();
                     newRow["Nome"] = nome;
                     newRow["Numero"] = numero;
                     newRow["quantidade_conserto"] = quantidadeConserto;
                     newRow["Data Conserto"] = Data.ToString("dd/MM/yyyy");
-
-
                     DateTime ultimaDataConserto = Data;
                     newRow["Garantia"] = CalcularGarantia(ultimaDataConserto);
                     newRow["Dias de Garantia"] = CalcularDias(ultimaDataConserto);
@@ -89,33 +78,27 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 Console.WriteLine(e.Message);
             }
-
             return pivotTable;
         }
 
         public int CalcularMesConserto(List<Object[]> dados)
         {
             int totalConserto = 0;
-
             foreach (Object[] row in dados)
             {
                 totalConserto++;
             }
-
             return totalConserto;
-
         }
 
         public int CalcularTotalConserto(List<Object[]> dados)
         {
             int totalConserto = 0;
-
             foreach (Object[] row in dados)
             {
                 int quantidadeConserto = (int)row[3];
                 totalConserto += quantidadeConserto;
             }
-
             return totalConserto;
         }
 
@@ -136,7 +119,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     }
                 }
             }
-
             return totalComGarantia;
         }
 
@@ -169,11 +151,11 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
 
                 if (res.Days <= 90 && res.Days >= 1)
                 {
-                    return   res.Days.ToString() ;
+                    return res.Days.ToString();
                 }
                 else if (res.Days <= 0 && res.Days >= -15)
                 {
-                    return  res.Days.ToString();
+                    return res.Days.ToString();
                 }
                 else
                 {
@@ -186,8 +168,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             }
 
         }
-
-
         public List<Object[]> BuscaPreenchimentoGrafico(String Data1, String Data2, string sql)
         {
             List<Object[]> resultados = new List<Object[]>();
@@ -196,12 +176,10 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 con = new Banco().Conexao();
                 con.Open();
-
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.Parameters.AddWithValue("@data1", Data1);
                 comando.Parameters.AddWithValue("@data2", Data2);
                 MySqlDataReader reader = comando.ExecuteReader();
-
                 while (reader.Read())
                 {
                     Object[] row = new Object[reader.FieldCount];
@@ -213,9 +191,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
 
                     resultados.Add(row);
                 }
-
                 reader.Close();
-
             }
             catch (MySqlException ex)
             {
@@ -225,7 +201,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 con.Close();
             }
-
             return resultados;
         }
     }

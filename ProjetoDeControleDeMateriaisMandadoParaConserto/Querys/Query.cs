@@ -42,15 +42,12 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Querys
 
         public String SqlInsertConserto = "INSERT INTO Conserto (Data,Produto_id) VALUES (@Data,@Produto_id;)";
 
-        public String EncontarNumero="SELECT * FROM Produto AS p left JOIN Conserto ON p.id = Conserto.Produto_id WHERE Numero = @numero;";
-        
-        public String buscaMapPc=  "select * from computador inner join pa on pa.id_pa=computador.fk_computador_Pa inner join grupos_pa on grupos_pa.id_grupo=pa.fk_grupo_id; ";
+        public String EncontarNumero = "SELECT * FROM Produto AS p left JOIN Conserto ON p.id = Conserto.Produto_id WHERE Numero = @numero;";
+
+        public String buscaMapPc = "select * from computador inner join pa on pa.id_pa=computador.fk_computador_Pa inner join grupos_pa on grupos_pa.id_grupo=pa.fk_grupo_id; ";
 
         public String encontrePc = "SELECT * FROM computador INNER JOIN pa ON pa.id_pa = computador.fk_computador_Pa INNER JOIN grupos_pa ON grupos_pa.id_grupo = pa.fk_grupo_id where computador.patrimonio=@patrimonio;";
 
         public String quantidadePcGrupo = "SELECT COUNT(*) FROM computador INNER JOIN pa ON pa.id_pa = computador.fk_computador_Pa INNER JOIN grupos_pa ON grupos_pa.id_grupo = pa.fk_grupo_id WHERE grupos_pa.grupos = @grupo;";
-        
-      
-
     }
 }

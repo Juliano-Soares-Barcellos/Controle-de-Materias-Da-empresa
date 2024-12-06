@@ -3,20 +3,15 @@ using ProjetoDeControleDeMateriaisMandadoParaConserto.BancoConexao;
 using ProjetoDeControleDeMateriaisMandadoParaConserto.Querys;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
 {
-   internal class NumeroDao
+    internal class NumeroDao
     {
         private MySqlConnection con = null;
-
         public object[] EncontrarNumero(string numero)
         {
-
             Query quey = new Query();
             List<object> resultados = new List<object>();
             try
@@ -27,7 +22,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                 MySqlCommand comando = new MySqlCommand(sql, con);
                 comando.Parameters.AddWithValue("@numero", numero);
                 MySqlDataReader reader = comando.ExecuteReader();
-               int tamanho = reader.FieldCount;
+                int tamanho = reader.FieldCount;
                 while (reader.Read())
                 {
                     object s = reader["Id"];
@@ -40,9 +35,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     resultados.Add(s);
                     s = reader["Data"];
                     resultados.Add(s);
-                        
                 }
-
             }
             catch (MySqlException ex)
             {
@@ -52,11 +45,10 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             {
                 con.Close();
             }
-
             return resultados.ToArray();
         }
 
-        public void Update(string numero,string sql)
+        public void Update(string numero, string sql)
         {
             try
             {
@@ -76,9 +68,8 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             }
         }
 
-        public void NovaData(int id,String sql)
+        public void NovaData(int id, String sql)
         {
-
             try
             {
                 con = new Banco().Conexao();

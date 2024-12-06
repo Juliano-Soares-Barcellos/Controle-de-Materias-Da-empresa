@@ -68,11 +68,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label8.Location = new System.Drawing.Point(23, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(363, 24);
+            this.label8.Size = new System.Drawing.Size(347, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Preencha os dados do computador";
             // 
@@ -237,10 +237,10 @@
             this.comboSistema.ForeColor = System.Drawing.SystemColors.MenuText;
             this.comboSistema.FormattingEnabled = true;
             this.comboSistema.Items.AddRange(new object[] {
-            "Windowns 7",
-            "Windown 8",
-            "Windowns 10",
-            "Windowns 11"});
+            "Windows 7",
+            "Windows 8",
+            "Windows 10",
+            "Windows 11"});
             this.comboSistema.Location = new System.Drawing.Point(13, 22);
             this.comboSistema.Name = "comboSistema";
             this.comboSistema.Size = new System.Drawing.Size(265, 24);
@@ -299,11 +299,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(26, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 15);
+            this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastrar";
             this.label1.Click += new System.EventHandler(this.label1_Click);

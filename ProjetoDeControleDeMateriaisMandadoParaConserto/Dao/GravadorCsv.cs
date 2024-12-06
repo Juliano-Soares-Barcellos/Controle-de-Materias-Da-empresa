@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
@@ -21,14 +18,13 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string caminhoArquivo = saveFileDialog.FileName;
-
                 using (StreamWriter writer = new StreamWriter(caminhoArquivo, false, Encoding.UTF8))
                 {
                     foreach (DataColumn coluna in tabela.Columns)
                     {
                         writer.Write(coluna.ColumnName + ";");
                     }
-                    writer.WriteLine(); 
+                    writer.WriteLine();
 
                     foreach (DataRow linha in tabela.Rows)
                     {

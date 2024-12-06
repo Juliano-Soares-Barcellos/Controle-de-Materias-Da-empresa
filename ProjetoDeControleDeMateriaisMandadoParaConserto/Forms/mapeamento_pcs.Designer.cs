@@ -91,7 +91,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.94444F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 285F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 392F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 408F));
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.quantidadeSistemas, 4, 0);
@@ -100,7 +100,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(958, 130);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(950, 130);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel3
@@ -116,7 +116,7 @@
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.MaximumSize = new System.Drawing.Size(380, 118);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(202, 118);
+            this.panel3.Size = new System.Drawing.Size(182, 118);
             this.panel3.TabIndex = 14;
             // 
             // Cempresa
@@ -130,7 +130,7 @@
             "Maximidia"});
             this.Cempresa.Location = new System.Drawing.Point(184, 18);
             this.Cempresa.Name = "Cempresa";
-            this.Cempresa.Size = new System.Drawing.Size(12, 21);
+            this.Cempresa.Size = new System.Drawing.Size(0, 21);
             this.Cempresa.TabIndex = 5;
             // 
             // LabelCMap
@@ -160,7 +160,7 @@
             "patrimonio"});
             this.Cfiltro.Location = new System.Drawing.Point(184, 58);
             this.Cfiltro.Name = "Cfiltro";
-            this.Cfiltro.Size = new System.Drawing.Size(12, 21);
+            this.Cfiltro.Size = new System.Drawing.Size(0, 21);
             this.Cfiltro.TabIndex = 3;
             // 
             // label2
@@ -170,10 +170,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label2.Location = new System.Drawing.Point(3, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 23);
+            this.label2.Size = new System.Drawing.Size(125, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Procurar por :";
             // 
@@ -198,7 +198,7 @@
             this.panel4.Controls.Add(this.MaskBox);
             this.panel4.Controls.Add(this.CombSetores);
             this.panel4.Controls.Add(this.EnterTab);
-            this.panel4.Location = new System.Drawing.Point(262, 6);
+            this.panel4.Location = new System.Drawing.Point(238, 6);
             this.panel4.MaximumSize = new System.Drawing.Size(500, 118);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(279, 118);
@@ -263,7 +263,7 @@
             this.quantidadeSistemas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.quantidadeSistemas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.quantidadeSistemas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.quantidadeSistemas.Location = new System.Drawing.Point(565, 6);
+            this.quantidadeSistemas.Location = new System.Drawing.Point(541, 6);
             this.quantidadeSistemas.MaximumSize = new System.Drawing.Size(600, 118);
             this.quantidadeSistemas.Name = "quantidadeSistemas";
             this.quantidadeSistemas.ReadOnly = true;
@@ -286,7 +286,7 @@
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(440, 3);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(130, 19);

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Model
 {
@@ -23,6 +19,6 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Model
         {
             this.Computador_id = new Computador();
         }
-        
+
     }
 }

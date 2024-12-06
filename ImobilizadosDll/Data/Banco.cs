@@ -10,8 +10,6 @@ namespace ImobilizadosDll.Data
     public class Banco
     {
         private string ConexaoPlanilhas = "Data Source=localhost;Username=root;Password=;Database=planilhas;";
-
-
         public MySqlConnection conexao()
         {
             return new MySqlConnection(ConexaoPlanilhas);
