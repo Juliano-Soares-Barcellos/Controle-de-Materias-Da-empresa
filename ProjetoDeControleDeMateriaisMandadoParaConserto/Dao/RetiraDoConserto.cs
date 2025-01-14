@@ -87,6 +87,7 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Dao
                     (string.Equals(TDescricao.Text, "Condenada", StringComparison.OrdinalIgnoreCase)))
             {
                 computadoresMapeadosEconsertado.Dao.UpdateDao.Condenar(id_pc.ToString());
+                computadoresMapeadosEconsertado.Dao.UpdateDao.updatePaCondenada(id_pc.ToString());
 
             }
             else

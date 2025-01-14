@@ -31,6 +31,8 @@ C:\Users\julianob\Desktop\ControleDeMateriais\Computadores\obj\Debug\computadore
 C:\Users\julianob\Desktop\ControleDeMateriais\Computadores\obj\Debug\computadoresMapeadosEconsertado.pdb
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.pdb
+C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll.CodeAnalysisLog.xml
+C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll.lastcodeanalysissucceeded
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\Dapper.dll
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\MySql.Data.dll
@@ -39,5 +41,3 @@ C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\obj\Debug\co
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\obj\Debug\computadoresMapeadosEconsertado.csproj.CopyComplete
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\obj\Debug\computadoresMapeadosEconsertado.dll
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\obj\Debug\computadoresMapeadosEconsertado.pdb
-C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll.CodeAnalysisLog.xml
-C:\Users\julianob\Desktop\serviço\ControleDeMateriais\Computadores\bin\Debug\computadoresMapeadosEconsertado.dll.lastcodeanalysissucceeded

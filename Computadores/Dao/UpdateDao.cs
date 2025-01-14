@@ -101,7 +101,19 @@ namespace computadoresMapeadosEconsertado.Dao
                 conexao.Execute(query.Condenar, parametros);
             }
         }
-
+        public static void updatePaCondenada(string id_computador)
+        {
+            Query query = new Query();
+            var parametros = new
+            {
+                id_computador = id_computador,
+            };
+            using (var conexao = new banco().conexao())
+            {
+                conexao.Open();
+                conexao.Execute(query.mudarParaPaCondenada, parametros);
+            }
+        }
         public static void InseririModelo(string id_computador, string marca)
         {
             Query query = new Query();

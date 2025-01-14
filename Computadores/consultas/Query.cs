@@ -31,12 +31,14 @@ namespace computadoresMapeadosEconsertado.consultas
         public String InserirTabelaTemp = "insert into temp_conserto (fk_computador,fk_pa)values (@fk_computador,@fk_pa);";
 
         public String mudarParaTi = "update computador set fk_computador_pa = 340 where id_computador =  @id_computador;";
+       
+        public String mudarParaPaCondenada = "update computador set fk_computador_pa = 341 where id_computador =  @id_computador;";
 
         public String selectTabelaTemp = "select * from temp_conserto where fk_computador = @id_computador;";
 
         public String retornarPaDeOrigem = "update computador set fk_computador_pa = @fk_pa where id_computador=@id_computador;";
 
-        public String Condenar = "update computador set Conservacao = Condenada where id_computador=@id_computador;";
+        public String Condenar = "update computador set Conservacao = 'Condenada' where id_computador=@id_computador;";
 
         public String DeletePaTemp = "delete from temp_conserto where id_tempConserto=@id_tempConserto;";
 

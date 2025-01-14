@@ -154,4 +154,3 @@ C:\Users\julianob\Desktop\serviço\ControleDeMateriais\ImobilizadosDll\obj\Debug
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\ImobilizadosDll\obj\Debug\ImobilizadosDll.csproj.CopyComplete
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\ImobilizadosDll\obj\Debug\ImobilizadosDll.dll
 C:\Users\julianob\Desktop\serviço\ControleDeMateriais\ImobilizadosDll\obj\Debug\ImobilizadosDll.pdb
-C:\Users\julianob\Desktop\serviço\ControleDeMateriais\ImobilizadosDll\obj\Debug\ImobilizadosDll.csproj.AssemblyReference.cache

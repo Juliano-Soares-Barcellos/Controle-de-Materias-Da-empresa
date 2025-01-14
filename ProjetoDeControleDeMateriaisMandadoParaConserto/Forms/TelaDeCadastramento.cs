@@ -222,5 +222,9 @@ namespace ProjetoDeControleDeMateriaisMandadoParaConserto.Forms
             HistoricoDeConserto.check2();
         }
 
+        private void TextDescricao_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
